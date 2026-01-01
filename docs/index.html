@@ -361,6 +361,8 @@
     .badge-claude { background: var(--purple); color: #fff; }
     .badge-archived { background: var(--yellow); color: #000; }
     .badge-fork { background: var(--text-muted); color: #000; }
+    .badge-pages { background: var(--green); color: #fff; text-decoration: none; }
+    .badge-pages:hover { opacity: 0.8; }
 
     /* Score Tooltip */
     .score-tooltip {
@@ -825,6 +827,9 @@
               is_fork: repo.fork,
               is_archived: repo.archived,
               license: repo.license?.spdx_id || null,
+              has_pages: repo.has_pages,
+              homepage: repo.homepage,
+              pages_url: repo.has_pages ? `https://${orgName}.github.io/${repo.name}/` : null,
               commit_stats: commitStats
             };
 
@@ -1102,6 +1107,7 @@
             </div>
 
             <div class="repo-badges">
+              ${repo.has_pages ? `<a href="${repo.pages_url}" target="_blank" class="badge badge-pages">Pages</a>` : ''}
               ${repo.has_claude_folder ? '<span class="badge badge-claude">.claude</span>' : ''}
               ${repo.has_claude_md ? '<span class="badge badge-claude">CLAUDE.md</span>' : ''}
               ${repo.is_archived ? '<span class="badge badge-archived">archived</span>' : ''}
