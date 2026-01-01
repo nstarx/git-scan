@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Organization Scanner</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-secondary: #161b22;
+      --bg-tertiary: #21262d;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --green: #3fb950;
+      --yellow: #d29922;
+      --red: #f85149;
+      --purple: #a371f7;
+      --orange: #db6d28;
+      --pink: #db61a2;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
+
+    header { text-align: center; margin-bottom: 2rem; }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-muted); }
+    .subtitle { color: var(--text-muted); }
+
+    /* Setup Form */
+    .setup-form {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .form-group { margin-bottom: 1rem; }
+    label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    input:focus { outline: none; border-color: var(--accent); }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--green);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .btn:hover { opacity: 0.9; }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn-secondary { background: var(--bg-tertiary); border: 1px solid var(--border); }
+
+    .hint { font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem; }
+    .hint a { color: var(--accent); text-decoration: none; }
+
+    /* Progress */
+    .progress-section {
+      display: none;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .progress-bar { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; margin-bottom: 1rem; }
+    .progress-fill { height: 100%; background: var(--accent); width: 0%; transition: width 0.3s; }
+    .progress-text { display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.875rem; }
+    .progress-log { margin-top: 1rem; max-height: 150px; overflow-y: auto; font-family: monospace; font-size: 0.8rem; color: var(--text-muted); }
+
+    .results-section { display: none; }
+
+    /* Organization Stats */
+    .org-header {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .org-title { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+    .org-title h2 { margin: 0; color: var(--text); }
+    .org-title a { color: var(--accent); text-decoration: none; }
+
+    .org-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .org-stat {
+      background: var(--bg-tertiary);
+      border-radius: 6px;
+      padding: 1rem;
+    }
+
+    .org-stat-label { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem; }
+    .org-stat-value { font-size: 1.5rem; font-weight: 600; }
+    .org-stat-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+    /* Human vs AI Stats */
+    .human-ai-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .stats-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem;
+    }
+
+    .stats-card h3 { font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+
+    .bar-chart { margin-bottom: 1rem; }
+    .bar-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+    .bar-label { width: 80px; font-size: 0.8rem; color: var(--text-muted); }
+    .bar-container { flex: 1; height: 20px; background: var(--bg-tertiary); border-radius: 4px; overflow: hidden; }
+    .bar-fill { height: 100%; transition: width 0.3s; }
+    .bar-fill.human { background: var(--green); }
+    .bar-fill.ai { background: var(--purple); }
+    .bar-fill.claude { background: var(--purple); }
+    .bar-fill.copilot { background: var(--accent); }
+    .bar-fill.gpt { background: var(--green); }
+    .bar-fill.cursor { background: var(--pink); }
+    .bar-fill.other { background: var(--text-muted); }
+    .bar-value { width: 60px; font-size: 0.8rem; text-align: right; }
+
+    /* Project Type Pills */
+    .project-types { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .type-pill {
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 2px solid transparent;
+    }
+    .type-pill.human { background: rgba(63, 185, 80, 0.2); color: var(--green); }
+    .type-pill.mixed { background: rgba(210, 153, 34, 0.2); color: var(--yellow); }
+    .type-pill.ai-assisted { background: rgba(163, 113, 247, 0.2); color: var(--purple); }
+    .type-pill.ai-heavy { background: rgba(219, 97, 162, 0.2); color: var(--pink); }
+    .type-pill.active { border-color: currentColor; }
+    .type-pill:hover { opacity: 0.8; }
+
+    /* Score Legend */
+    .score-legend {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .legend-toggle {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .legend-content { display: none; margin-top: 1rem; }
+    .legend-content.show { display: block; }
+
+    .legend-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .legend-item { background: var(--bg-tertiary); border-radius: 6px; padding: 0.75rem; }
+    .legend-item-header { display: flex; justify-content: space-between; margin-bottom: 0.25rem; }
+    .legend-item-name { font-weight: 500; }
+    .legend-item-max { color: var(--accent); font-size: 0.85rem; }
+    .legend-item-formula { font-size: 0.75rem; color: var(--text-muted); }
+
+    /* Filters */
+    .filters {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .search-input {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.5rem 1rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+    }
+
+    select {
+      padding: 0.5rem 1rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+    }
+
+    /* Repo Grid */
+    .repo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 1rem;
+    }
+
+    .repo-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem;
+      transition: border-color 0.2s;
+    }
+
+    .repo-card:hover { border-color: var(--accent); }
+
+    .repo-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 0.5rem; }
+    .repo-name { font-size: 1.1rem; font-weight: 600; }
+    .repo-name a { color: var(--accent); text-decoration: none; }
+    .repo-name a:hover { text-decoration: underline; }
+
+    .repo-score-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-tertiary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      cursor: help;
+    }
+
+    .repo-score-badge .score-num { font-weight: 600; color: var(--accent); }
+    .repo-score-badge .score-max { color: var(--text-muted); }
+
+    .repo-type-badge {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+    }
+    .repo-type-badge.human { background: rgba(63, 185, 80, 0.3); color: var(--green); }
+    .repo-type-badge.mixed { background: rgba(210, 153, 34, 0.3); color: var(--yellow); }
+    .repo-type-badge.ai-assisted { background: rgba(163, 113, 247, 0.3); color: var(--purple); }
+    .repo-type-badge.ai-heavy { background: rgba(219, 97, 162, 0.3); color: var(--pink); }
+
+    .repo-description {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .repo-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      padding: 0.75rem;
+      background: var(--bg-tertiary);
+      border-radius: 6px;
+    }
+
+    .repo-stat-item { text-align: center; }
+    .repo-stat-item .value { font-size: 1rem; font-weight: 600; }
+    .repo-stat-item .label { font-size: 0.65rem; color: var(--text-muted); }
+
+    .repo-commit-bar {
+      height: 6px;
+      background: var(--bg-tertiary);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+      display: flex;
+    }
+    .repo-commit-bar .human-bar { background: var(--green); }
+    .repo-commit-bar .ai-bar { background: var(--purple); }
+
+    .repo-commit-legend {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .repo-commit-legend span { display: flex; align-items: center; gap: 0.25rem; }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .legend-dot.human { background: var(--green); }
+    .legend-dot.ai { background: var(--purple); }
+
+    /* Commit Calendar */
+    .repo-calendar { margin-bottom: 0.75rem; }
+    .calendar-label { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.25rem; }
+    .calendar-grid { display: flex; gap: 2px; flex-wrap: wrap; }
+    .calendar-day { width: 8px; height: 8px; border-radius: 1px; }
+    .calendar-day.empty { background: var(--bg-tertiary); }
+    .calendar-day.level-1 { background: #0e4429; }
+    .calendar-day.level-2 { background: #006d32; }
+    .calendar-day.level-3 { background: #26a641; }
+    .calendar-day.level-4 { background: #39d353; }
+    .calendar-day.ai-level-1 { background: #3d1f5c; }
+    .calendar-day.ai-level-2 { background: #5c2d91; }
+    .calendar-day.ai-level-3 { background: #8b5cf6; }
+    .calendar-day.ai-level-4 { background: #a78bfa; }
+
+    .repo-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .repo-meta-item { display: flex; align-items: center; gap: 0.25rem; }
+    .language-dot { width: 12px; height: 12px; border-radius: 50%; }
+
+    .repo-badges { display: flex; gap: 0.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .badge { font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; background: var(--bg-tertiary); }
+    .badge-claude { background: var(--purple); color: #fff; }
+    .badge-archived { background: var(--yellow); color: #000; }
+    .badge-fork { background: var(--text-muted); color: #000; }
+
+    /* Score Tooltip */
+    .score-tooltip {
+      position: absolute;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.75rem;
+      font-size: 0.75rem;
+      z-index: 1000;
+      min-width: 180px;
+      display: none;
+    }
+
+    .score-tooltip.show { display: block; }
+    .score-tooltip-row { display: flex; justify-content: space-between; margin-bottom: 0.25rem; }
+    .score-tooltip-row:last-child { margin-bottom: 0; border-top: 1px solid var(--border); padding-top: 0.25rem; font-weight: 600; }
+
+    .error-message {
+      background: rgba(248, 81, 73, 0.1);
+      border: 1px solid var(--red);
+      color: var(--red);
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 600px) {
+      .repo-grid { grid-template-columns: 1fr; }
+      .filters { flex-direction: column; }
+      .org-stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>GitHub Organization Scanner</h1>
+      <p class="subtitle">Analyze repositories with Human vs AI commit statistics</p>
+    </header>
+
+    <div id="setupForm" class="setup-form">
+      <div class="form-group">
+        <label for="orgName">Organization Name</label>
+        <input type="text" id="orgName" value="nstarx" placeholder="e.g., nstarx">
+      </div>
+      <div class="form-group">
+        <label for="token">GitHub Token (optional but recommended)</label>
+        <input type="password" id="token" placeholder="ghp_xxxxxxxxxxxx">
+        <p class="hint">
+          Required for detailed commit analysis.
+          <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">Create token</a>
+          with <code>repo</code> scope.
+        </p>
+      </div>
+      <button id="scanBtn" class="btn" onclick="startScan()">Scan Organization</button>
+      <button id="loadJsonBtn" class="btn btn-secondary" onclick="loadFromJson()" style="margin-left: 0.5rem;">Load Cached Data</button>
+    </div>
+
+    <div id="progressSection" class="progress-section">
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+      <div class="progress-text">
+        <span id="progressStatus">Initializing...</span>
+        <span id="progressPercent">0%</span>
+      </div>
+      <div id="progressLog" class="progress-log"></div>
+    </div>
+
+    <div id="errorSection" class="error-message hidden"></div>
+
+    <div id="resultsSection" class="results-section">
+      <!-- Organization Header -->
+      <div class="org-header">
+        <div class="org-title">
+          <h2 id="orgNameDisplay">Organization</h2>
+          <a id="orgLink" href="#" target="_blank">View on GitHub</a>
+        </div>
+        <div class="org-stats-grid">
+          <div class="org-stat">
+            <div class="org-stat-label">Total Repositories</div>
+            <div id="statRepos" class="org-stat-value">0</div>
+          </div>
+          <div class="org-stat">
+            <div class="org-stat-label">Total Commits (last year)</div>
+            <div id="statCommits" class="org-stat-value">0</div>
+            <div class="org-stat-sub"><span id="statHumanPct">0</span>% human / <span id="statAIPct">0</span>% AI</div>
+          </div>
+          <div class="org-stat">
+            <div class="org-stat-label">Stars</div>
+            <div id="statStars" class="org-stat-value">0</div>
+          </div>
+          <div class="org-stat">
+            <div class="org-stat-label">Forks</div>
+            <div id="statForks" class="org-stat-value">0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Human vs AI Stats -->
+      <div class="human-ai-stats">
+        <div class="stats-card">
+          <h3><span style="color: var(--green);">&#9679;</span> Human vs <span style="color: var(--purple);">&#9679;</span> AI Commits</h3>
+          <div class="bar-chart">
+            <div class="bar-row">
+              <span class="bar-label">Human</span>
+              <div class="bar-container">
+                <div id="humanBar" class="bar-fill human" style="width: 0%"></div>
+              </div>
+              <span id="humanCount" class="bar-value">0</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">AI Total</span>
+              <div class="bar-container">
+                <div id="aiBar" class="bar-fill ai" style="width: 0%"></div>
+              </div>
+              <span id="aiCount" class="bar-value">0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-card">
+          <h3>AI Breakdown by Tool</h3>
+          <div id="aiBreakdown" class="bar-chart"></div>
+        </div>
+
+        <div class="stats-card">
+          <h3>Projects by Type</h3>
+          <div id="projectTypes" class="project-types"></div>
+        </div>
+      </div>
+
+      <!-- Score Legend -->
+      <div class="score-legend">
+        <div class="legend-toggle" onclick="toggleLegend()">
+          <h3>Score Legend</h3>
+          <span id="legendArrow">&#9660;</span>
+        </div>
+        <div id="legendContent" class="legend-content">
+          <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">
+            The popularity score (max 350) measures repository activity and engagement:
+          </p>
+          <div class="legend-grid">
+            <div class="legend-item">
+              <div class="legend-item-header">
+                <span class="legend-item-name">&#9733; Stars</span>
+                <span class="legend-item-max">max 100</span>
+              </div>
+              <div class="legend-item-formula">2 points per star</div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-item-header">
+                <span class="legend-item-name">&#128268; Forks</span>
+                <span class="legend-item-max">max 50</span>
+              </div>
+              <div class="legend-item-formula">5 points per fork</div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-item-header">
+                <span class="legend-item-name">&#128221; Commits</span>
+                <span class="legend-item-max">max 100</span>
+              </div>
+              <div class="legend-item-formula">1 point per 10 commits</div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-item-header">
+                <span class="legend-item-name">&#128197; Activity</span>
+                <span class="legend-item-max">max 50</span>
+              </div>
+              <div class="legend-item-formula">&lt;7d: 50, &lt;30d: 40, &lt;90d: 25, &lt;1y: 10</div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-item-header">
+                <span class="legend-item-name">&#128101; Contributors</span>
+                <span class="legend-item-max">max 30</span>
+              </div>
+              <div class="legend-item-formula">5 points per contributor</div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-item-header">
+                <span class="legend-item-name">&#128065; Watchers</span>
+                <span class="legend-item-max">max 20</span>
+              </div>
+              <div class="legend-item-formula">2 points per watcher</div>
+            </div>
+          </div>
+          <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+            <h4 style="margin-bottom: 0.5rem; font-size: 0.9rem;">Project Types</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem; font-size: 0.8rem;">
+              <div><span class="repo-type-badge human">human</span> No AI commits detected</div>
+              <div><span class="repo-type-badge mixed">mixed</span> &lt;20% AI commits</div>
+              <div><span class="repo-type-badge ai-assisted">ai-assisted</span> Claude config OR 20-50% AI</div>
+              <div><span class="repo-type-badge ai-heavy">ai-heavy</span> Claude config AND 50%+ AI</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="filters">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search repositories..." oninput="filterRepos()">
+        <select id="languageFilter" onchange="filterRepos()">
+          <option value="">All Languages</option>
+        </select>
+        <select id="typeFilter" onchange="filterRepos()">
+          <option value="">All Types</option>
+          <option value="human">Human Only</option>
+          <option value="mixed">Mixed</option>
+          <option value="ai-assisted">AI-Assisted</option>
+          <option value="ai-heavy">AI-Heavy</option>
+        </select>
+        <select id="sortBy" onchange="filterRepos()">
+          <option value="score">Sort by Score</option>
+          <option value="stars">Sort by Stars</option>
+          <option value="commits">Sort by Commits</option>
+          <option value="ai-pct">Sort by AI %</option>
+          <option value="updated">Sort by Updated</option>
+          <option value="name">Sort by Name</option>
+          <option value="size">Sort by Size</option>
+        </select>
+      </div>
+
+      <div id="repoGrid" class="repo-grid"></div>
+    </div>
+
+    <!-- Score Tooltip -->
+    <div id="scoreTooltip" class="score-tooltip"></div>
+  </div>
+
+  <script>
+    const GITHUB_API = 'https://api.github.com';
+    let allProjects = [];
+    let orgStats = {};
+    let scoreLegend = {};
+    let token = '';
+
+    const languageColors = {
+      JavaScript: '#f1e05a', TypeScript: '#3178c6', Python: '#3572A5',
+      Vue: '#41b883', Java: '#b07219', Go: '#00ADD8', Rust: '#dea584',
+      Ruby: '#701516', PHP: '#4F5D95', 'C#': '#178600', 'C++': '#f34b7d',
+      C: '#555555', Swift: '#F05138', Kotlin: '#A97BFF', Scala: '#c22d40',
+      HTML: '#e34c26', CSS: '#563d7c', SCSS: '#c6538c', Shell: '#89e051',
+      Dockerfile: '#384d54', Makefile: '#427819', Unknown: '#8b949e'
+    };
+
+    const AI_PATTERNS = {
+      claude: [/claude/i, /anthropic/i, /generated with claude/i, /co-authored-by:.*claude/i],
+      copilot: [/copilot/i, /github copilot/i],
+      gpt: [/chatgpt/i, /openai/i, /gpt-4/i, /gpt-3/i],
+      cursor: [/cursor/i],
+      generic: [/ai-generated/i, /auto-generated/i, /\ud83e\udd16/]
+    };
+
+    function detectAICommit(message, authorName, authorEmail) {
+      const text = `${message} ${authorName} ${authorEmail}`.toLowerCase();
+      for (const [aiType, patterns] of Object.entries(AI_PATTERNS)) {
+        for (const pattern of patterns) {
+          if (pattern.test(text)) return { isAI: true, aiType };
+        }
+      }
+      if (authorEmail && (authorEmail.includes('bot@') || authorEmail.includes('noreply@anthropic') || authorEmail.includes('[bot]'))) {
+        return { isAI: true, aiType: 'bot' };
+      }
+      return { isAI: false, aiType: null };
+    }
+
+    async function fetchWithAuth(url) {
+      const headers = { 'Accept': 'application/vnd.github.v3+json' };
+      if (token) headers['Authorization'] = `token ${token}`;
+      const response = await fetch(url, { headers });
+      if (!response.ok) throw new Error(`GitHub API error: ${response.status}`);
+      return { response, data: await response.json() };
+    }
+
+    function log(msg) {
+      const el = document.getElementById('progressLog');
+      el.innerHTML += msg + '<br>';
+      el.scrollTop = el.scrollHeight;
+    }
+
+    function updateProgress(current, total, status) {
+      const pct = Math.round((current / total) * 100);
+      document.getElementById('progressFill').style.width = pct + '%';
+      document.getElementById('progressPercent').textContent = pct + '%';
+      document.getElementById('progressStatus').textContent = status;
+    }
+
+    async function getOrgRepos(orgName) {
+      const repos = [];
+      let page = 1;
+      while (true) {
+        const { data } = await fetchWithAuth(`${GITHUB_API}/orgs/${orgName}/repos?per_page=100&page=${page}&sort=updated`);
+        if (data.length === 0) break;
+        repos.push(...data);
+        log(`Fetched ${repos.length} repositories...`);
+        if (data.length < 100) break;
+        page++;
+      }
+      return repos;
+    }
+
+    async function getCommitStats(orgName, repoName) {
+      const stats = {
+        calendar: {}, human_calendar: {}, ai_calendar: {},
+        total_commits: 0, human_commits: 0, ai_commits: 0,
+        ai_breakdown: { claude: 0, copilot: 0, gpt: 0, cursor: 0, generic: 0, bot: 0 },
+        recent_commits: []
+      };
+
+      const since = new Date(Date.now() - 365 * 24 * 60 * 60 * 1000).toISOString();
+      try {
+        let page = 1;
+        while (page <= 5) {
+          const { data } = await fetchWithAuth(
+            `${GITHUB_API}/repos/${orgName}/${repoName}/commits?per_page=100&page=${page}&since=${since}`
+          );
+          if (!Array.isArray(data) || data.length === 0) break;
+
+          for (const commit of data) {
+            const date = commit.commit?.author?.date?.split('T')[0];
+            const message = commit.commit?.message || '';
+            const authorName = commit.commit?.author?.name || '';
+            const authorEmail = commit.commit?.author?.email || '';
+            if (!date) continue;
+
+            stats.total_commits++;
+            stats.calendar[date] = (stats.calendar[date] || 0) + 1;
+
+            const { isAI, aiType } = detectAICommit(message, authorName, authorEmail);
+            if (isAI) {
+              stats.ai_commits++;
+              stats.ai_calendar[date] = (stats.ai_calendar[date] || 0) + 1;
+              if (aiType) stats.ai_breakdown[aiType]++;
+            } else {
+              stats.human_commits++;
+              stats.human_calendar[date] = (stats.human_calendar[date] || 0) + 1;
+            }
+
+            if (stats.recent_commits.length < 5) {
+              stats.recent_commits.push({
+                sha: commit.sha?.substring(0, 7),
+                message: message.split('\n')[0].substring(0, 60),
+                author: authorName, date, isAI, aiType
+              });
+            }
+          }
+          if (data.length < 100) break;
+          page++;
+        }
+      } catch (e) { /* ignore */ }
+      return stats;
+    }
+
+    async function checkClaudeConfig(orgName, repoName) {
+      const result = { has_claude_folder: false, has_claude_md: false };
+      try {
+        const r1 = await fetch(`${GITHUB_API}/repos/${orgName}/${repoName}/contents/.claude`, {
+          headers: token ? { Authorization: `token ${token}` } : {}
+        });
+        result.has_claude_folder = r1.ok;
+      } catch {}
+      try {
+        const r2 = await fetch(`${GITHUB_API}/repos/${orgName}/${repoName}/contents/CLAUDE.md`, {
+          headers: token ? { Authorization: `token ${token}` } : {}
+        });
+        result.has_claude_md = r2.ok;
+      } catch {}
+      return result;
+    }
+
+    function formatSize(bytes) {
+      const units = ['B', 'KB', 'MB', 'GB'];
+      let size = bytes, i = 0;
+      while (size >= 1024 && i < units.length - 1) { size /= 1024; i++; }
+      return `${size.toFixed(1)} ${units[i]}`;
+    }
+
+    function calculateScore(stats) {
+      const breakdown = {};
+      breakdown.stars = Math.min(stats.stars * 2, 100);
+      breakdown.forks = Math.min(stats.forks * 5, 50);
+      breakdown.commits = Math.min(stats.commit_count / 10, 100);
+      let activity = 0;
+      if (stats.last_commit_date) {
+        const days = Math.floor((Date.now() - new Date(stats.last_commit_date).getTime()) / 86400000);
+        if (days < 7) activity = 50;
+        else if (days < 30) activity = 40;
+        else if (days < 90) activity = 25;
+        else if (days < 365) activity = 10;
+      }
+      breakdown.activity = activity;
+      breakdown.contributors = Math.min(stats.contributor_count * 5, 30);
+      breakdown.watchers = Math.min(stats.watchers * 2, 20);
+      const total = Object.values(breakdown).reduce((a, b) => a + b, 0);
+      return { total: Math.round(total * 100) / 100, breakdown, max: 350 };
+    }
+
+    function classifyProject(stats) {
+      const aiRatio = stats.commit_stats.total_commits > 0
+        ? stats.commit_stats.ai_commits / stats.commit_stats.total_commits : 0;
+      const hasClaude = stats.has_claude_folder || stats.has_claude_md;
+      if (hasClaude && aiRatio >= 0.5) return 'ai-heavy';
+      if (hasClaude || aiRatio >= 0.2) return 'ai-assisted';
+      if (aiRatio > 0) return 'mixed';
+      return 'human';
+    }
+
+    async function startScan() {
+      const orgName = document.getElementById('orgName').value.trim();
+      token = document.getElementById('token').value.trim();
+      if (!orgName) return showError('Please enter an organization name');
+
+      document.getElementById('setupForm').classList.add('hidden');
+      document.getElementById('progressSection').style.display = 'block';
+      document.getElementById('resultsSection').style.display = 'none';
+      document.getElementById('errorSection').classList.add('hidden');
+      document.getElementById('progressLog').innerHTML = '';
+
+      try {
+        log(`Scanning organization: ${orgName}`);
+        const repos = await getOrgRepos(orgName);
+        log(`Found ${repos.length} repositories`);
+
+        allProjects = [];
+        orgStats = {
+          total_commits: 0, human_commits: 0, ai_commits: 0,
+          ai_breakdown: { claude: 0, copilot: 0, gpt: 0, cursor: 0, generic: 0, bot: 0 },
+          projects_by_type: { human: 0, mixed: 0, 'ai-assisted': 0, 'ai-heavy': 0 }
+        };
+
+        const batchSize = 3;
+        for (let i = 0; i < repos.length; i += batchSize) {
+          const batch = repos.slice(i, i + batchSize);
+          const results = await Promise.all(batch.map(async (repo) => {
+            const [commitStats, claudeConfig] = await Promise.all([
+              getCommitStats(orgName, repo.name),
+              checkClaudeConfig(orgName, repo.name)
+            ]);
+
+            const stats = {
+              name: repo.name,
+              full_name: repo.full_name,
+              url: repo.html_url,
+              description: repo.description || 'No description',
+              has_claude_folder: claudeConfig.has_claude_folder,
+              has_claude_md: claudeConfig.has_claude_md,
+              size_bytes: repo.size * 1024,
+              size_human: formatSize(repo.size * 1024),
+              stars: repo.stargazers_count,
+              forks: repo.forks_count,
+              watchers: repo.watchers_count,
+              open_issues: repo.open_issues_count,
+              commit_count: commitStats.total_commits,
+              contributor_count: 1,
+              primary_language: repo.language || 'Unknown',
+              topics: repo.topics || [],
+              created_at: repo.created_at,
+              last_commit_date: repo.pushed_at,
+              is_fork: repo.fork,
+              is_archived: repo.archived,
+              license: repo.license?.spdx_id || null,
+              commit_stats: commitStats
+            };
+
+            const score = calculateScore(stats);
+            stats.popularity_score = score.total;
+            stats.score_breakdown = score.breakdown;
+            stats.score_max = score.max;
+            stats.project_type = classifyProject(stats);
+
+            // Aggregate
+            orgStats.total_commits += commitStats.total_commits;
+            orgStats.human_commits += commitStats.human_commits;
+            orgStats.ai_commits += commitStats.ai_commits;
+            for (const [k, v] of Object.entries(commitStats.ai_breakdown)) {
+              orgStats.ai_breakdown[k] += v;
+            }
+            orgStats.projects_by_type[stats.project_type]++;
+
+            return stats;
+          }));
+
+          allProjects.push(...results);
+          updateProgress(Math.min(i + batchSize, repos.length), repos.length, `Processing: ${batch[batch.length - 1].name}`);
+          log(`Processed: ${batch.map(r => r.name).join(', ')}`);
+        }
+
+        allProjects.sort((a, b) => b.popularity_score - a.popularity_score);
+        log('Scan complete!');
+
+        localStorage.setItem('git-scan-data', JSON.stringify({
+          generated_at: new Date().toISOString(),
+          organization: orgName,
+          organization_url: `https://github.com/${orgName}`,
+          total_projects: allProjects.length,
+          org_stats: orgStats,
+          projects: allProjects
+        }));
+
+        displayResults(orgName);
+      } catch (error) {
+        showError(error.message);
+        document.getElementById('setupForm').classList.remove('hidden');
+      }
+    }
+
+    function loadFromJson() {
+      const stored = localStorage.getItem('git-scan-data');
+      if (stored) {
+        try {
+          const data = JSON.parse(stored);
+          allProjects = data.projects || [];
+          orgStats = data.org_stats || {};
+          document.getElementById('setupForm').classList.add('hidden');
+          displayResults(data.organization);
+        } catch (e) { showError('Invalid cached data'); }
+      } else {
+        fetch('projects.json')
+          .then(r => r.json())
+          .then(data => {
+            allProjects = data.projects || [];
+            orgStats = data.org_stats || {};
+            document.getElementById('setupForm').classList.add('hidden');
+            displayResults(data.organization);
+          })
+          .catch(() => showError('No cached data. Run a scan first.'));
+      }
+    }
+
+    function showError(msg) {
+      const el = document.getElementById('errorSection');
+      el.textContent = msg;
+      el.classList.remove('hidden');
+    }
+
+    function toggleLegend() {
+      const content = document.getElementById('legendContent');
+      const arrow = document.getElementById('legendArrow');
+      content.classList.toggle('show');
+      arrow.textContent = content.classList.contains('show') ? '\u25B2' : '\u25BC';
+    }
+
+    function displayResults(orgName) {
+      document.getElementById('progressSection').style.display = 'none';
+      document.getElementById('resultsSection').style.display = 'block';
+
+      // Org header
+      document.getElementById('orgNameDisplay').textContent = orgName;
+      document.getElementById('orgLink').href = `https://github.com/${orgName}`;
+
+      // Stats
+      const totalStars = allProjects.reduce((s, p) => s + p.stars, 0);
+      const totalForks = allProjects.reduce((s, p) => s + p.forks, 0);
+
+      document.getElementById('statRepos').textContent = allProjects.length;
+      document.getElementById('statCommits').textContent = orgStats.total_commits?.toLocaleString() || 0;
+      document.getElementById('statStars').textContent = totalStars.toLocaleString();
+      document.getElementById('statForks').textContent = totalForks.toLocaleString();
+
+      const humanPct = orgStats.total_commits > 0 ? ((orgStats.human_commits / orgStats.total_commits) * 100).toFixed(1) : 0;
+      const aiPct = orgStats.total_commits > 0 ? ((orgStats.ai_commits / orgStats.total_commits) * 100).toFixed(1) : 0;
+      document.getElementById('statHumanPct').textContent = humanPct;
+      document.getElementById('statAIPct').textContent = aiPct;
+
+      // Human vs AI bars
+      document.getElementById('humanBar').style.width = humanPct + '%';
+      document.getElementById('humanCount').textContent = orgStats.human_commits?.toLocaleString() || 0;
+      document.getElementById('aiBar').style.width = aiPct + '%';
+      document.getElementById('aiCount').textContent = orgStats.ai_commits?.toLocaleString() || 0;
+
+      // AI breakdown
+      const aiBreakdown = document.getElementById('aiBreakdown');
+      const aiTotal = orgStats.ai_commits || 1;
+      const breakdownOrder = ['claude', 'copilot', 'gpt', 'cursor', 'generic', 'bot'];
+      aiBreakdown.innerHTML = breakdownOrder.map(type => {
+        const count = orgStats.ai_breakdown?.[type] || 0;
+        const pct = ((count / aiTotal) * 100).toFixed(1);
+        return `
+          <div class="bar-row">
+            <span class="bar-label">${type}</span>
+            <div class="bar-container">
+              <div class="bar-fill ${type === 'bot' || type === 'generic' ? 'other' : type}" style="width: ${pct}%"></div>
+            </div>
+            <span class="bar-value">${count}</span>
+          </div>
+        `;
+      }).join('');
+
+      // Project types
+      const projectTypes = document.getElementById('projectTypes');
+      const types = ['human', 'mixed', 'ai-assisted', 'ai-heavy'];
+      projectTypes.innerHTML = types.map(type => {
+        const count = orgStats.projects_by_type?.[type] || 0;
+        return `<div class="type-pill ${type}" onclick="filterByType('${type}')">${type}: ${count}</div>`;
+      }).join('');
+
+      // Language filter
+      const languages = [...new Set(allProjects.map(p => p.primary_language).filter(l => l !== 'Unknown'))].sort();
+      document.getElementById('languageFilter').innerHTML = '<option value="">All Languages</option>' +
+        languages.map(l => `<option value="${l}">${l}</option>`).join('');
+
+      filterRepos();
+    }
+
+    function filterByType(type) {
+      document.getElementById('typeFilter').value = type;
+      filterRepos();
+    }
+
+    function filterRepos() {
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const language = document.getElementById('languageFilter').value;
+      const type = document.getElementById('typeFilter').value;
+      const sortBy = document.getElementById('sortBy').value;
+
+      let filtered = allProjects.filter(p => {
+        const matchSearch = p.name.toLowerCase().includes(search) || (p.description?.toLowerCase().includes(search));
+        const matchLang = !language || p.primary_language === language;
+        const matchType = !type || p.project_type === type;
+        return matchSearch && matchLang && matchType;
+      });
+
+      filtered.sort((a, b) => {
+        switch (sortBy) {
+          case 'stars': return b.stars - a.stars;
+          case 'commits': return b.commit_count - a.commit_count;
+          case 'ai-pct':
+            const aPct = a.commit_stats?.total_commits > 0 ? a.commit_stats.ai_commits / a.commit_stats.total_commits : 0;
+            const bPct = b.commit_stats?.total_commits > 0 ? b.commit_stats.ai_commits / b.commit_stats.total_commits : 0;
+            return bPct - aPct;
+          case 'updated': return new Date(b.last_commit_date) - new Date(a.last_commit_date);
+          case 'name': return a.name.localeCompare(b.name);
+          case 'size': return b.size_bytes - a.size_bytes;
+          default: return b.popularity_score - a.popularity_score;
+        }
+      });
+
+      renderRepos(filtered);
+    }
+
+    function renderCalendar(calendar, aiCalendar) {
+      const days = [];
+      const now = new Date();
+      for (let i = 90; i >= 0; i--) {
+        const d = new Date(now - i * 86400000);
+        const dateStr = d.toISOString().split('T')[0];
+        const total = calendar?.[dateStr] || 0;
+        const ai = aiCalendar?.[dateStr] || 0;
+        const human = total - ai;
+
+        let level = 'empty';
+        if (total > 0) {
+          if (ai > human) {
+            // More AI commits
+            if (total >= 10) level = 'ai-level-4';
+            else if (total >= 5) level = 'ai-level-3';
+            else if (total >= 2) level = 'ai-level-2';
+            else level = 'ai-level-1';
+          } else {
+            // More human commits
+            if (total >= 10) level = 'level-4';
+            else if (total >= 5) level = 'level-3';
+            else if (total >= 2) level = 'level-2';
+            else level = 'level-1';
+          }
+        }
+        days.push(`<div class="calendar-day ${level}" title="${dateStr}: ${human} human, ${ai} AI"></div>`);
+      }
+      return days.join('');
+    }
+
+    function renderRepos(repos) {
+      const grid = document.getElementById('repoGrid');
+      grid.innerHTML = repos.map(repo => {
+        const humanCommits = repo.commit_stats?.human_commits || 0;
+        const aiCommits = repo.commit_stats?.ai_commits || 0;
+        const totalCommits = repo.commit_stats?.total_commits || 1;
+        const humanPct = ((humanCommits / totalCommits) * 100).toFixed(0);
+        const aiPct = ((aiCommits / totalCommits) * 100).toFixed(0);
+
+        return `
+          <div class="repo-card">
+            <div class="repo-header">
+              <div class="repo-name">
+                <a href="${repo.url}" target="_blank">${repo.name}</a>
+                <span class="repo-type-badge ${repo.project_type}">${repo.project_type}</span>
+              </div>
+              <div class="repo-score-badge" onmouseenter="showScoreTooltip(event, ${JSON.stringify(repo.score_breakdown).replace(/"/g, '&quot;')}, ${repo.popularity_score})" onmouseleave="hideScoreTooltip()">
+                <span class="score-num">${repo.popularity_score}</span>
+                <span class="score-max">/ ${repo.score_max}</span>
+              </div>
+            </div>
+
+            <div class="repo-description">${repo.description}</div>
+
+            <div class="repo-stats">
+              <div class="repo-stat-item">
+                <div class="value">${repo.stars}</div>
+                <div class="label">Stars</div>
+              </div>
+              <div class="repo-stat-item">
+                <div class="value">${repo.forks}</div>
+                <div class="label">Forks</div>
+              </div>
+              <div class="repo-stat-item">
+                <div class="value">${repo.commit_count}</div>
+                <div class="label">Commits</div>
+              </div>
+              <div class="repo-stat-item">
+                <div class="value">${repo.open_issues}</div>
+                <div class="label">Issues</div>
+              </div>
+            </div>
+
+            <div class="repo-commit-bar">
+              <div class="human-bar" style="width: ${humanPct}%"></div>
+              <div class="ai-bar" style="width: ${aiPct}%"></div>
+            </div>
+            <div class="repo-commit-legend">
+              <span><span class="legend-dot human"></span> Human: ${humanCommits} (${humanPct}%)</span>
+              <span><span class="legend-dot ai"></span> AI: ${aiCommits} (${aiPct}%)</span>
+            </div>
+
+            <div class="repo-calendar">
+              <div class="calendar-label">Last 90 days (green=human, purple=AI)</div>
+              <div class="calendar-grid">${renderCalendar(repo.commit_stats?.calendar, repo.commit_stats?.ai_calendar)}</div>
+            </div>
+
+            <div class="repo-meta">
+              <span class="repo-meta-item">
+                <span class="language-dot" style="background: ${languageColors[repo.primary_language] || '#8b949e'}"></span>
+                ${repo.primary_language}
+              </span>
+              <span class="repo-meta-item">${repo.size_human}</span>
+              <span class="repo-meta-item">Updated ${new Date(repo.last_commit_date).toLocaleDateString()}</span>
+            </div>
+
+            <div class="repo-badges">
+              ${repo.has_claude_folder ? '<span class="badge badge-claude">.claude</span>' : ''}
+              ${repo.has_claude_md ? '<span class="badge badge-claude">CLAUDE.md</span>' : ''}
+              ${repo.is_archived ? '<span class="badge badge-archived">archived</span>' : ''}
+              ${repo.is_fork ? '<span class="badge badge-fork">fork</span>' : ''}
+              ${repo.license ? `<span class="badge">${repo.license}</span>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function showScoreTooltip(event, breakdown, total) {
+      const tooltip = document.getElementById('scoreTooltip');
+      tooltip.innerHTML = `
+        <div class="score-tooltip-row"><span>Stars</span><span>${breakdown.stars || 0}</span></div>
+        <div class="score-tooltip-row"><span>Forks</span><span>${breakdown.forks || 0}</span></div>
+        <div class="score-tooltip-row"><span>Commits</span><span>${Math.round((breakdown.commits || 0) * 10) / 10}</span></div>
+        <div class="score-tooltip-row"><span>Activity</span><span>${breakdown.activity || 0}</span></div>
+        <div class="score-tooltip-row"><span>Contributors</span><span>${breakdown.contributors || 0}</span></div>
+        <div class="score-tooltip-row"><span>Watchers</span><span>${breakdown.watchers || 0}</span></div>
+        <div class="score-tooltip-row"><span>Total</span><span>${total}</span></div>
+      `;
+      tooltip.style.left = event.pageX + 10 + 'px';
+      tooltip.style.top = event.pageY + 10 + 'px';
+      tooltip.classList.add('show');
+    }
+
+    function hideScoreTooltip() {
+      document.getElementById('scoreTooltip').classList.remove('show');
+    }
+
+    window.onload = () => {
+      const stored = localStorage.getItem('git-scan-data');
+      if (stored) {
+        document.getElementById('loadJsonBtn').textContent = 'Load Cached Data';
+      }
+    };
+  </script>
+</body>
+</html>
