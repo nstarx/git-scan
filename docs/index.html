@@ -392,6 +392,26 @@
 
     .hidden { display: none !important; }
 
+    /* Collapsible Sections */
+    .collapsible-section { margin-bottom: 2rem; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 0.75rem 1rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    .section-header:hover { border-color: var(--accent); }
+    .section-header h3 { margin: 0; }
+    .section-arrow { color: var(--text-muted); transition: transform 0.2s; }
+    .section-content { display: block; }
+    .section-content.collapsed { display: none; }
+    .section-arrow.collapsed { transform: rotate(-90deg); }
+
     @media (max-width: 600px) {
       .repo-grid { grid-template-columns: 1fr; }
       .filters { flex-direction: column; }
@@ -588,7 +608,27 @@
         </select>
       </div>
 
-      <div id="repoGrid" class="repo-grid"></div>
+      <!-- GitHub Pages Section -->
+      <div id="pagesSection" class="collapsible-section" style="margin-bottom: 2rem;">
+        <div class="section-header" onclick="toggleSection('pages')">
+          <h3 id="pagesHeader" style="font-size: 1.25rem;">GitHub Pages Sites</h3>
+          <span id="pagesArrow" class="section-arrow">&#9660;</span>
+        </div>
+        <div id="pagesContent" class="section-content">
+          <div id="pagesGrid" class="repo-grid"></div>
+        </div>
+      </div>
+
+      <!-- Repositories Section -->
+      <div id="reposSection" class="collapsible-section">
+        <div class="section-header" onclick="toggleSection('repos')">
+          <h3 id="repoGridHeader" style="font-size: 1.25rem;">Repositories</h3>
+          <span id="reposArrow" class="section-arrow">&#9660;</span>
+        </div>
+        <div id="reposContent" class="section-content">
+          <div id="repoGrid" class="repo-grid"></div>
+        </div>
+      </div>
     </div>
 
     <!-- Score Tooltip -->
@@ -911,6 +951,13 @@
       arrow.textContent = content.classList.contains('show') ? '\u25B2' : '\u25BC';
     }
 
+    function toggleSection(section) {
+      const content = document.getElementById(section + 'Content');
+      const arrow = document.getElementById(section + 'Arrow');
+      content.classList.toggle('collapsed');
+      arrow.classList.toggle('collapsed');
+    }
+
     function displayResults(orgName) {
       document.getElementById('progressSection').style.display = 'none';
       document.getElementById('resultsSection').style.display = 'block';
@@ -971,6 +1018,94 @@
         languages.map(l => `<option value="${l}">${l}</option>`).join('');
 
       filterRepos();
+      renderPagesSection();
+    }
+
+    function renderPagesSection() {
+      const pagesRepos = allProjects.filter(p => p.has_pages);
+      const section = document.getElementById('pagesSection');
+      const grid = document.getElementById('pagesGrid');
+
+      console.log('GitHub Pages repos found:', pagesRepos.length);
+
+      if (pagesRepos.length === 0) {
+        section.style.display = 'none';
+        return;
+      }
+
+      section.style.display = 'block';
+      document.getElementById('pagesHeader').textContent = 'GitHub Pages Sites (' + pagesRepos.length + ')';
+
+      grid.innerHTML = pagesRepos.map(repo => {
+        const humanCommits = repo.commit_stats?.human_commits || 0;
+        const aiCommits = repo.commit_stats?.ai_commits || 0;
+        const totalCommits = repo.commit_stats?.total_commits || 1;
+        const humanPct = ((humanCommits / totalCommits) * 100).toFixed(0);
+        const aiPct = ((aiCommits / totalCommits) * 100).toFixed(0);
+
+        return `
+          <div class="repo-card">
+            <div class="repo-header">
+              <div class="repo-name">
+                <a href="${repo.url}" target="_blank">${repo.name}</a>
+                <span class="repo-type-badge ${repo.project_type}">${repo.project_type}</span>
+              </div>
+              <div class="repo-score-badge">
+                <span class="score-num">${repo.popularity_score}</span>
+                <span class="score-max">/ ${repo.score_max}</span>
+              </div>
+            </div>
+
+            <div class="repo-description">${repo.description}</div>
+
+            <div class="repo-stats">
+              <div class="repo-stat-item">
+                <div class="value">${repo.stars}</div>
+                <div class="label">Stars</div>
+              </div>
+              <div class="repo-stat-item">
+                <div class="value">${repo.forks}</div>
+                <div class="label">Forks</div>
+              </div>
+              <div class="repo-stat-item">
+                <div class="value">${repo.commit_count}</div>
+                <div class="label">Commits</div>
+              </div>
+              <div class="repo-stat-item">
+                <div class="value">${repo.open_issues}</div>
+                <div class="label">Issues</div>
+              </div>
+            </div>
+
+            <div class="repo-commit-bar">
+              <div class="human-bar" style="width: ${humanPct}%"></div>
+              <div class="ai-bar" style="width: ${aiPct}%"></div>
+            </div>
+            <div class="repo-commit-legend">
+              <span><span class="legend-dot human"></span> Human: ${humanCommits} (${humanPct}%)</span>
+              <span><span class="legend-dot ai"></span> AI: ${aiCommits} (${aiPct}%)</span>
+            </div>
+
+            <div class="repo-meta">
+              <span class="repo-meta-item">
+                <span class="language-dot" style="background: ${languageColors[repo.primary_language] || '#8b949e'}"></span>
+                ${repo.primary_language}
+              </span>
+              <span class="repo-meta-item">${repo.size_human}</span>
+              <span class="repo-meta-item">Updated ${new Date(repo.last_commit_date).toLocaleDateString()}</span>
+            </div>
+
+            <div class="repo-badges">
+              <a href="${repo.pages_url}" target="_blank" class="badge badge-pages">Visit Pages Site</a>
+              ${repo.has_claude_folder ? '<span class="badge badge-claude">.claude</span>' : ''}
+              ${repo.has_claude_md ? '<span class="badge badge-claude">CLAUDE.md</span>' : ''}
+              ${repo.is_archived ? '<span class="badge badge-archived">archived</span>' : ''}
+              ${repo.is_fork ? '<span class="badge badge-fork">fork</span>' : ''}
+              ${repo.license ? '<span class="badge">' + repo.license + '</span>' : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
     }
 
     function filterByType(type) {
@@ -985,6 +1120,8 @@
       const sortBy = document.getElementById('sortBy').value;
 
       let filtered = allProjects.filter(p => {
+        // Exclude GitHub Pages repos from main grid (they're in their own section)
+        if (p.has_pages) return false;
         const matchSearch = p.name.toLowerCase().includes(search) || (p.description?.toLowerCase().includes(search));
         const matchLang = !language || p.primary_language === language;
         const matchType = !type || p.project_type === type;
@@ -1006,6 +1143,7 @@
         }
       });
 
+      document.getElementById('repoGridHeader').textContent = 'Repositories (' + filtered.length + ')';
       renderRepos(filtered);
     }
 

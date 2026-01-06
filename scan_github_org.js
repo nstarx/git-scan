@@ -13,7 +13,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const ORG_NAME = 'nstarx';
+// Org name from command line arg or env var, default to 'nstarx'
+const ORG_NAME = process.argv[2] || process.env.GITHUB_ORG || 'nstarx';
 const GITHUB_API = 'https://api.github.com';
 
 // Patterns to detect AI-generated commits
@@ -111,16 +112,61 @@ async function getOrgRepos(orgName) {
   let page = 1;
   const perPage = 100;
 
+  // First try org endpoint
+  console.log(`Trying organization endpoint...`);
   while (true) {
-    const url = `${GITHUB_API}/orgs/${orgName}/repos?per_page=${perPage}&page=${page}&sort=updated`;
-    const data = await fetchWithAuth(url);
+    const url = `${GITHUB_API}/orgs/${orgName}/repos?per_page=${perPage}&page=${page}&type=all&sort=updated`;
+    console.log(`  Fetching page ${page}...`);
 
-    if (data.length === 0) break;
+    try {
+      const data = await fetchWithAuth(url);
 
-    repos.push(...data);
+      if (!Array.isArray(data)) {
+        console.log(`  Unexpected response:`, data);
+        break;
+      }
 
-    if (data.length < perPage) break;
-    page++;
+      if (data.length === 0) break;
+
+      repos.push(...data);
+      console.log(`  Got ${data.length} repos (total: ${repos.length})`);
+
+      if (data.length < perPage) break;
+      page++;
+    } catch (err) {
+      console.log(`  Error on org endpoint: ${err.message}`);
+      break;
+    }
+  }
+
+  // If org endpoint returned few repos, also try user endpoint
+  if (repos.length < 50) {
+    console.log(`\nTrying user endpoint as fallback...`);
+    page = 1;
+    while (true) {
+      const url = `${GITHUB_API}/users/${orgName}/repos?per_page=${perPage}&page=${page}&type=all&sort=updated`;
+      console.log(`  Fetching page ${page}...`);
+
+      try {
+        const data = await fetchWithAuth(url);
+
+        if (!Array.isArray(data) || data.length === 0) break;
+
+        // Only add repos we don't already have
+        for (const repo of data) {
+          if (!repos.find(r => r.id === repo.id)) {
+            repos.push(repo);
+          }
+        }
+        console.log(`  Got ${data.length} repos (total unique: ${repos.length})`);
+
+        if (data.length < perPage) break;
+        page++;
+      } catch (err) {
+        console.log(`  Error on user endpoint: ${err.message}`);
+        break;
+      }
+    }
   }
 
   return repos;
@@ -368,6 +414,13 @@ function classifyProject(stats) {
 async function scanOrganization(orgName) {
   console.log(`Scanning GitHub organization: ${orgName}...`);
 
+  if (!process.env.GITHUB_TOKEN) {
+    console.log('\nWARNING: No GITHUB_TOKEN set. Only public repos will be scanned.');
+    console.log('Set GITHUB_TOKEN with "repo" scope to include private repos.\n');
+  } else {
+    console.log('Using GitHub token for authentication.\n');
+  }
+
   const repos = await getOrgRepos(orgName);
   console.log(`Found ${repos.length} repositories`);
 
@@ -423,6 +476,9 @@ async function scanOrganization(orgName) {
       is_archived: repo.archived,
       default_branch: repo.default_branch,
       license: repo.license?.spdx_id || null,
+      has_pages: repo.has_pages,
+      homepage: repo.homepage || null,
+      pages_url: repo.has_pages ? `https://${orgName}.github.io/${repo.name}/` : null,
       commit_stats: commitStats
     };
 
@@ -482,10 +538,13 @@ async function main() {
     };
 
     const outputPath = path.join(__dirname, 'projects.json');
+    const docsOutputPath = path.join(__dirname, 'docs', 'projects.json');
     fs.writeFileSync(outputPath, JSON.stringify(output, null, 2), 'utf-8');
+    fs.writeFileSync(docsOutputPath, JSON.stringify(output, null, 2), 'utf-8');
 
     console.log(`\nFound ${projects.length} repositories`);
     console.log(`Output saved to: ${outputPath}`);
+    console.log(`Output copied to: ${docsOutputPath}`);
 
     // Print summary
     console.log('\n' + '='.repeat(60));
@@ -497,6 +556,14 @@ async function main() {
     console.log(`\nProjects by type:`);
     for (const [type, count] of Object.entries(orgStats.projects_by_type)) {
       console.log(`  ${type}: ${count}`);
+    }
+
+    const pagesRepos = projects.filter(p => p.has_pages);
+    if (pagesRepos.length > 0) {
+      console.log(`\nGitHub Pages sites: ${pagesRepos.length}`);
+      for (const p of pagesRepos) {
+        console.log(`  - ${p.name}: ${p.pages_url}`);
+      }
     }
 
     if (projects.length > 0) {

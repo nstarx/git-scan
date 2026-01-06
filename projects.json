@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-01-01T12:57:23.714Z",
+  "generated_at": "2026-01-06T09:13:22.808Z",
   "organization": "nstarx",
   "organization_url": "https://github.com/nstarx",
-  "total_projects": 174,
+  "total_projects": 175,
   "org_stats": {
-    "total_commits": 1946,
-    "human_commits": 1854,
-    "ai_commits": 92,
+    "total_commits": 1950,
+    "human_commits": 1853,
+    "ai_commits": 97,
     "ai_breakdown": {
-      "claude": 78,
+      "claude": 83,
       "copilot": 0,
       "gpt": 8,
       "cursor": 1,
@@ -16,7 +16,7 @@
       "bot": 3
     },
     "projects_by_type": {
-      "human": 147,
+      "human": 148,
       "mixed": 4,
       "ai-assisted": 19,
       "ai-heavy": 4
@@ -147,6 +147,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": "Apache-2.0",
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-06": 3,
@@ -385,6 +388,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": "Apache-2.0",
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-09": 1,
@@ -609,6 +615,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-11-05": 1,
@@ -1074,6 +1083,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": "Apache-2.0",
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -1169,6 +1181,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -1288,6 +1303,9 @@
       "is_archived": false,
       "default_branch": "master",
       "license": "MIT",
+      "has_pages": false,
+      "homepage": "https://discord.gg/trsr8SXpW5",
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -1359,24 +1377,21 @@
       "is_archived": false,
       "default_branch": "master",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-01-09": 3,
-          "2025-01-08": 3,
-          "2025-01-03": 1,
-          "2024-11-19": 1,
-          "2024-11-18": 1
+          "2025-01-08": 3
         },
         "human_calendar": {
           "2025-01-09": 3,
-          "2025-01-08": 3,
-          "2025-01-03": 1,
-          "2024-11-19": 1,
-          "2024-11-18": 1
+          "2025-01-08": 3
         },
         "ai_calendar": {},
-        "total_commits": 9,
-        "human_commits": 9,
+        "total_commits": 6,
+        "human_commits": 6,
         "ai_commits": 0,
         "ai_breakdown": {
           "claude": 0,
@@ -1440,33 +1455,6 @@
             "isAI": false,
             "aiType": null,
             "url": "https://github.com/nstarx/tes-backend/commit/a2c485f7eec05bb877c2e94e3c5cf974d47d01ec"
-          },
-          {
-            "sha": "6ea1437",
-            "message": "logging in RDS to get proper error message",
-            "author": "Rohit Kumar",
-            "date": "2025-01-03",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/tes-backend/commit/6ea14376dc180992c52671ea14d86fe8241db43c"
-          },
-          {
-            "sha": "88c32f6",
-            "message": "added code to fetch user info in auth middleware",
-            "author": "Rohit Kumar",
-            "date": "2024-11-19",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/tes-backend/commit/88c32f6bb6ba33b7a96e612439da261b5d160158"
-          },
-          {
-            "sha": "d4538fa",
-            "message": "logging all info in a single dict",
-            "author": "Rohit Kumar",
-            "date": "2024-11-18",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/tes-backend/commit/d4538faa235e1bcc8735de3ea10026c4cf829332"
           }
         ],
         "contributors_human": 1,
@@ -1492,20 +1480,20 @@
       "has_claude_folder": false,
       "has_claude_md": false,
       "claude_settings": null,
-      "size_bytes": 444416,
-      "size_human": "434.0 KB",
+      "size_bytes": 287744,
+      "size_human": "281.0 KB",
       "stars": 1,
       "forks": 0,
       "watchers": 1,
       "open_issues": 0,
-      "commit_count": 50,
+      "commit_count": 55,
       "branch_count": 4,
       "contributor_count": 2,
       "contributors": [
         {
           "login": "padrian2s",
           "avatar": "https://avatars.githubusercontent.com/u/423459?v=4",
-          "contributions": 44,
+          "contributions": 49,
           "url": "https://github.com/padrian2s"
         },
         {
@@ -1519,13 +1507,20 @@
       "topics": [],
       "created_at": "2023-11-17T07:27:37Z",
       "first_commit_date": "2023-11-17T07:27:37Z",
-      "last_commit_date": "2025-12-26T07:53:56Z",
+      "last_commit_date": "2026-01-06T08:36:58Z",
       "is_fork": false,
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/CardinalNStar/",
       "commit_stats": {
         "calendar": {
+          "2026-01-06": 1,
+          "2026-01-05": 1,
+          "2026-01-03": 2,
+          "2026-01-01": 1,
           "2025-12-26": 12,
           "2025-12-25": 2,
           "2025-12-14": 1,
@@ -1565,16 +1560,20 @@
           "2025-08-29": 5
         },
         "ai_calendar": {
+          "2026-01-06": 1,
+          "2026-01-05": 1,
+          "2026-01-03": 2,
+          "2026-01-01": 1,
           "2025-12-26": 11,
           "2025-12-25": 2,
           "2025-12-14": 1,
           "2025-11-03": 1
         },
-        "total_commits": 44,
+        "total_commits": 49,
         "human_commits": 29,
-        "ai_commits": 15,
+        "ai_commits": 20,
         "ai_breakdown": {
-          "claude": 15,
+          "claude": 20,
           "copilot": 0,
           "gpt": 0,
           "cursor": 0,
@@ -1582,6 +1581,51 @@
           "bot": 0
         },
         "recent_commits": [
+          {
+            "sha": "ad1de99",
+            "message": "Add Paper Decoded to Core Apps",
+            "author": "adrian",
+            "date": "2026-01-06",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/CardinalNStar/commit/ad1de99f703a058a9c252742b8a0ca5edf3f36f3"
+          },
+          {
+            "sha": "03af79b",
+            "message": "Add search functionality with keyboard shortcuts",
+            "author": "adrian",
+            "date": "2026-01-05",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/CardinalNStar/commit/03af79b429e56e0ad9bfd74306c47736b4a2d7a7"
+          },
+          {
+            "sha": "e663ad8",
+            "message": "Update LeaderKit URL to GitHub Pages",
+            "author": "adrian",
+            "date": "2026-01-03",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/CardinalNStar/commit/e663ad85e78c91709d8fa0f5e289b90bf5b35f45"
+          },
+          {
+            "sha": "53401a2",
+            "message": "Add Soft Skills category and LeaderKit link",
+            "author": "adrian",
+            "date": "2026-01-03",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/CardinalNStar/commit/53401a27e180462cde4ef435c0d3977fc521cb7c"
+          },
+          {
+            "sha": "a08aaa3",
+            "message": "Add Git Scan tool to Dev Tools category",
+            "author": "adrian",
+            "date": "2026-01-01",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/CardinalNStar/commit/a08aaa3a2163d9af6b5e20818481541e040c2133"
+          },
           {
             "sha": "5c27ab2",
             "message": "Merge pull request #5 from nstarx/claude/link-categories-v2-zCfmk",
@@ -1626,197 +1670,19 @@
             "isAI": true,
             "aiType": "claude",
             "url": "https://github.com/nstarx/CardinalNStar/commit/e71dfb9d52e54491356b2c1d33cfc8f20a7c8857"
-          },
-          {
-            "sha": "2325480",
-            "message": "Merge main branch, accepting main's changes for conflicts",
-            "author": "Claude",
-            "date": "2025-12-26",
-            "isAI": true,
-            "aiType": "claude",
-            "url": "https://github.com/nstarx/CardinalNStar/commit/2325480f660139b66f9e2e7fec8873836bfd8eac"
-          },
-          {
-            "sha": "9d6c7e0",
-            "message": "Merge pull request #2 from nstarx/revert-1-claude/add-link-categories-zCfmk",
-            "author": "Adrian Paleacu",
-            "date": "2025-12-26",
-            "isAI": true,
-            "aiType": "claude",
-            "url": "https://github.com/nstarx/CardinalNStar/commit/9d6c7e0d41a3f7b3ebdc7250668218adcf10bd79"
-          },
-          {
-            "sha": "4e8b00e",
-            "message": "Revert \"Add folder structure and categories to links\"",
-            "author": "Adrian Paleacu",
-            "date": "2025-12-26",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/CardinalNStar/commit/4e8b00ef4d3cd4e2d2e3d28098a9132e0d72bfcd"
-          },
-          {
-            "sha": "9b0f92d",
-            "message": "Move NStarX Vue, Claude Memory, and Claude Code Internals to Documentation",
-            "author": "Claude",
-            "date": "2025-12-26",
-            "isAI": true,
-            "aiType": "claude",
-            "url": "https://github.com/nstarx/CardinalNStar/commit/9b0f92dc4edd90376e959933af39498881eaa721"
-          },
-          {
-            "sha": "b9e42cd",
-            "message": "Add subcategories nested within categories",
-            "author": "Claude",
-            "date": "2025-12-26",
-            "isAI": true,
-            "aiType": "claude",
-            "url": "https://github.com/nstarx/CardinalNStar/commit/b9e42cd6a74a21d27d4cae03bc248fabc724457d"
           }
         ],
         "contributors_human": 1,
         "contributors_ai": 2
       },
-      "popularity_score": 69,
+      "popularity_score": 69.5,
       "score_breakdown": {
         "stars": 2,
         "forks": 0,
-        "commits": 5,
+        "commits": 5.5,
         "activity": 50,
         "contributors": 10,
         "watchers": 2
-      },
-      "score_max": 350,
-      "project_type": "ai-assisted"
-    },
-    {
-      "name": "claude-memory",
-      "full_name": "nstarx/claude-memory",
-      "url": "https://github.com/nstarx/claude-memory",
-      "description": "No description available",
-      "has_claude_folder": false,
-      "has_claude_md": false,
-      "claude_settings": null,
-      "size_bytes": 39936,
-      "size_human": "39.0 KB",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "open_issues": 0,
-      "commit_count": 6,
-      "branch_count": 3,
-      "contributor_count": 2,
-      "contributors": [
-        {
-          "login": "padrian2s",
-          "avatar": "https://avatars.githubusercontent.com/u/423459?v=4",
-          "contributions": 4,
-          "url": "https://github.com/padrian2s"
-        },
-        {
-          "login": "claude",
-          "avatar": "https://avatars.githubusercontent.com/u/81847?v=4",
-          "contributions": 2,
-          "url": "https://github.com/claude"
-        }
-      ],
-      "primary_language": "Unknown",
-      "topics": [],
-      "created_at": "2025-12-25T19:35:55Z",
-      "first_commit_date": "2025-12-25T19:35:55Z",
-      "last_commit_date": "2025-12-29T05:55:08Z",
-      "is_fork": false,
-      "is_archived": false,
-      "default_branch": "main",
-      "license": null,
-      "commit_stats": {
-        "calendar": {
-          "2025-12-29": 4,
-          "2025-12-25": 2
-        },
-        "human_calendar": {
-          "2025-12-25": 2
-        },
-        "ai_calendar": {
-          "2025-12-29": 4
-        },
-        "total_commits": 6,
-        "human_commits": 2,
-        "ai_commits": 4,
-        "ai_breakdown": {
-          "claude": 4,
-          "copilot": 0,
-          "gpt": 0,
-          "cursor": 0,
-          "generic": 0,
-          "bot": 0
-        },
-        "recent_commits": [
-          {
-            "sha": "2705f60",
-            "message": "Merge pull request #2 from nstarx/claude/add-skills-charts-w26IS",
-            "author": "Adrian Paleacu",
-            "date": "2025-12-29",
-            "isAI": true,
-            "aiType": "claude",
-            "url": "https://github.com/nstarx/claude-memory/commit/2705f604551e9d66f659c25b787d5b4dfe3cb0a1"
-          },
-          {
-            "sha": "63ce72e",
-            "message": "Add interactive charts and graphs for skills visualization",
-            "author": "Claude",
-            "date": "2025-12-29",
-            "isAI": true,
-            "aiType": "claude",
-            "url": "https://github.com/nstarx/claude-memory/commit/63ce72e5e3ca9ce8f4641e9878b7a3486f4e3dea"
-          },
-          {
-            "sha": "9c16b58",
-            "message": "Merge pull request #1 from nstarx/claude/create-skills-top-charts-5lvNm",
-            "author": "Adrian Paleacu",
-            "date": "2025-12-29",
-            "isAI": true,
-            "aiType": "claude",
-            "url": "https://github.com/nstarx/claude-memory/commit/9c16b58809f1f108435644cda8e6072f7e805aa5"
-          },
-          {
-            "sha": "f59701b",
-            "message": "Add Skills Top Charts page",
-            "author": "Claude",
-            "date": "2025-12-29",
-            "isAI": true,
-            "aiType": "claude",
-            "url": "https://github.com/nstarx/claude-memory/commit/f59701b83ec4cb9b1b379ce2a36811ebc330f3cf"
-          },
-          {
-            "sha": "ae1da21",
-            "message": "Trigger deploy",
-            "author": "adrian",
-            "date": "2025-12-25",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/claude-memory/commit/ae1da215cf923945f136097c7cb1fb958a014c6f"
-          },
-          {
-            "sha": "9934b45",
-            "message": "first commit",
-            "author": "adrian",
-            "date": "2025-12-25",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/claude-memory/commit/9934b45ad8d36967b2427bfa9a74e8d9cba6c102"
-          }
-        ],
-        "contributors_human": 1,
-        "contributors_ai": 2
-      },
-      "popularity_score": 60.6,
-      "score_breakdown": {
-        "stars": 0,
-        "forks": 0,
-        "commits": 0.6,
-        "activity": 50,
-        "contributors": 10,
-        "watchers": 0
       },
       "score_max": 350,
       "project_type": "ai-assisted"
@@ -1873,6 +1739,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-10-31": 1,
@@ -2120,325 +1989,15 @@
       "project_type": "ai-assisted"
     },
     {
-      "name": "dh-poc",
-      "full_name": "nstarx/dh-poc",
-      "url": "https://github.com/nstarx/dh-poc",
-      "description": "Digital Human Command Centre Proof-of-concept",
-      "has_claude_folder": false,
-      "has_claude_md": false,
-      "claude_settings": null,
-      "size_bytes": 32239616,
-      "size_human": "30.7 MB",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "open_issues": 0,
-      "commit_count": 19,
-      "branch_count": 4,
-      "contributor_count": 3,
-      "contributors": [
-        {
-          "login": "bohemia420",
-          "avatar": "https://avatars.githubusercontent.com/u/3143799?v=4",
-          "contributions": 14,
-          "url": "https://github.com/bohemia420"
-        },
-        {
-          "login": "SidKondapuram",
-          "avatar": "https://avatars.githubusercontent.com/u/28262280?v=4",
-          "contributions": 3,
-          "url": "https://github.com/SidKondapuram"
-        },
-        {
-          "login": "sai-inguva",
-          "avatar": "https://avatars.githubusercontent.com/u/174418117?v=4",
-          "contributions": 2,
-          "url": "https://github.com/sai-inguva"
-        }
-      ],
-      "primary_language": "Python",
-      "topics": [],
-      "created_at": "2025-11-03T09:58:19Z",
-      "first_commit_date": "2025-11-03T09:58:19Z",
-      "last_commit_date": "2025-12-04T19:27:41Z",
-      "is_fork": false,
-      "is_archived": false,
-      "default_branch": "main",
-      "license": null,
-      "commit_stats": {
-        "calendar": {
-          "2025-11-24": 2,
-          "2025-11-11": 1,
-          "2025-11-10": 3,
-          "2025-11-06": 2,
-          "2025-11-07": 2,
-          "2025-11-05": 2,
-          "2025-11-03": 7
-        },
-        "human_calendar": {
-          "2025-11-24": 2,
-          "2025-11-11": 1,
-          "2025-11-10": 3,
-          "2025-11-06": 2,
-          "2025-11-07": 2,
-          "2025-11-05": 2,
-          "2025-11-03": 7
-        },
-        "ai_calendar": {},
-        "total_commits": 19,
-        "human_commits": 19,
-        "ai_commits": 0,
-        "ai_breakdown": {
-          "claude": 0,
-          "copilot": 0,
-          "gpt": 0,
-          "cursor": 0,
-          "generic": 0,
-          "bot": 0
-        },
-        "recent_commits": [
-          {
-            "sha": "8472027",
-            "message": "Added FastAPI backend into dh-poc repository",
-            "author": "singuva",
-            "date": "2025-11-24",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/dh-poc/commit/84720275e7d4cfb2d2391710e87991be3c180c06"
-          },
-          {
-            "sha": "2efcf2a",
-            "message": "keyclok",
-            "author": "singuva",
-            "date": "2025-11-24",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/dh-poc/commit/2efcf2add0d2af1452751b8585fe1e150914eda0"
-          },
-          {
-            "sha": "e2d80e8",
-            "message": "Rewrite to remove Keycloak direct calls",
-            "author": "Sid Kondapuram",
-            "date": "2025-11-11",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/dh-poc/commit/e2d80e895541399f2d79e48337fd9752f8c1a364"
-          },
-          {
-            "sha": "20e89b0",
-            "message": "Merge pull request #4 from nstarx/k3s-experiment",
-            "author": "Sumit Khanna",
-            "date": "2025-11-10",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/dh-poc/commit/20e89b0e361593ce3221acf465c6495b4c168a7d"
-          },
-          {
-            "sha": "87db175",
-            "message": "truncated all responses, parametrized /logs",
-            "author": "bohemia420",
-            "date": "2025-11-10",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/dh-poc/commit/87db1755d6114c477ef31fe5494770a45738f37d"
-          },
-          {
-            "sha": "3e11083",
-            "message": "trimmed api responses, GET",
-            "author": "bohemia420",
-            "date": "2025-11-10",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/dh-poc/commit/3e110836faedea8059fd0ba45c3073189bc3dcfa"
-          },
-          {
-            "sha": "bc0fea6",
-            "message": "Keycloak initialization",
-            "author": "Sid Kondapuram",
-            "date": "2025-11-06",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/dh-poc/commit/bc0fea6a357f412ebc0b38dd17d668535980ac6b"
-          },
-          {
-            "sha": "1b565d1",
-            "message": "Merge pull request #3 from nstarx/k3s-experiment",
-            "author": "Sumit Khanna",
-            "date": "2025-11-07",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/dh-poc/commit/1b565d1ed2ee84363f5b37ce78177c31f2fa0d4e"
-          },
-          {
-            "sha": "99d4e74",
-            "message": "working delete/restart of pods",
-            "author": "bohemia420",
-            "date": "2025-11-07",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/dh-poc/commit/99d4e7487f13e54d78f9b14773440bd264938685"
-          },
-          {
-            "sha": "0224f8e",
-            "message": "working logs streaming",
-            "author": "bohemia420",
-            "date": "2025-11-06",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/dh-poc/commit/0224f8ed0f90e756104c1c8a06753f3f86775c1d"
-          }
-        ],
-        "contributors_human": 3,
-        "contributors_ai": 0
-      },
-      "popularity_score": 56.9,
-      "score_breakdown": {
-        "stars": 0,
-        "forks": 0,
-        "commits": 1.9,
-        "activity": 40,
-        "contributors": 15,
-        "watchers": 0
-      },
-      "score_max": 350,
-      "project_type": "human"
-    },
-    {
-      "name": "PaperDecoded",
-      "full_name": "nstarx/PaperDecoded",
-      "url": "https://github.com/nstarx/PaperDecoded",
-      "description": "No description available",
-      "has_claude_folder": false,
-      "has_claude_md": true,
-      "claude_settings": null,
-      "size_bytes": 48130048,
-      "size_human": "45.9 MB",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "open_issues": 0,
-      "commit_count": 6,
-      "branch_count": 1,
-      "contributor_count": 1,
-      "contributors": [
-        {
-          "login": "padrian2s",
-          "avatar": "https://avatars.githubusercontent.com/u/423459?v=4",
-          "contributions": 6,
-          "url": "https://github.com/padrian2s"
-        }
-      ],
-      "primary_language": "HTML",
-      "topics": [],
-      "created_at": "2025-12-29T07:15:59Z",
-      "first_commit_date": "2025-12-29T07:15:59Z",
-      "last_commit_date": "2025-12-29T16:18:31Z",
-      "is_fork": false,
-      "is_archived": false,
-      "default_branch": "main",
-      "license": null,
-      "commit_stats": {
-        "calendar": {
-          "2025-12-29": 6
-        },
-        "human_calendar": {
-          "2025-12-29": 1
-        },
-        "ai_calendar": {
-          "2025-12-29": 5
-        },
-        "total_commits": 6,
-        "human_commits": 1,
-        "ai_commits": 5,
-        "ai_breakdown": {
-          "claude": 5,
-          "copilot": 0,
-          "gpt": 0,
-          "cursor": 0,
-          "generic": 0,
-          "bot": 0
-        },
-        "recent_commits": [
-          {
-            "sha": "6499b61",
-            "message": "Fix text colors and add citation heatmap to cards",
-            "author": "adrian",
-            "date": "2025-12-29",
-            "isAI": true,
-            "aiType": "claude",
-            "url": "https://github.com/nstarx/PaperDecoded/commit/6499b61ef626031e7b87da3240e1fcf8ca1cfdfe"
-          },
-          {
-            "sha": "0c351ed",
-            "message": "Improve UI: collapsible filters, fix badge placement, separate year filters",
-            "author": "adrian",
-            "date": "2025-12-29",
-            "isAI": true,
-            "aiType": "claude",
-            "url": "https://github.com/nstarx/PaperDecoded/commit/0c351ed095327e2d51ee844e08222f0349c0a853"
-          },
-          {
-            "sha": "7eeb3eb",
-            "message": "Add year filtering, citation badges, and sorting functionality",
-            "author": "adrian",
-            "date": "2025-12-29",
-            "isAI": true,
-            "aiType": "claude",
-            "url": "https://github.com/nstarx/PaperDecoded/commit/7eeb3eb1068936daae742f511fec4201830ef4b8"
-          },
-          {
-            "sha": "e3375d3",
-            "message": "Add Illusion of Thinking paper explainer",
-            "author": "adrian",
-            "date": "2025-12-29",
-            "isAI": true,
-            "aiType": "claude",
-            "url": "https://github.com/nstarx/PaperDecoded/commit/e3375d32774950894fd76c2f520ecbbbb8f5f565"
-          },
-          {
-            "sha": "c98b169",
-            "message": "Add 11 paper explainer pages and update index",
-            "author": "adrian",
-            "date": "2025-12-29",
-            "isAI": true,
-            "aiType": "claude",
-            "url": "https://github.com/nstarx/PaperDecoded/commit/c98b1696e680bab4265520acf67e6e3788fea795"
-          },
-          {
-            "sha": "c80f195",
-            "message": "first commit",
-            "author": "adrian",
-            "date": "2025-12-29",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/PaperDecoded/commit/c80f1953a64ea7e832c647ad295e356e125bf072"
-          }
-        ],
-        "contributors_human": 1,
-        "contributors_ai": 1
-      },
-      "popularity_score": 55.6,
-      "score_breakdown": {
-        "stars": 0,
-        "forks": 0,
-        "commits": 0.6,
-        "activity": 50,
-        "contributors": 5,
-        "watchers": 0
-      },
-      "score_max": 350,
-      "project_type": "ai-heavy"
-    },
-    {
-      "name": "nstarx-vue",
-      "full_name": "nstarx/nstarx-vue",
-      "url": "https://github.com/nstarx/nstarx-vue",
+      "name": "git-scan",
+      "full_name": "nstarx/git-scan",
+      "url": "https://github.com/nstarx/git-scan",
       "description": "No description available",
       "has_claude_folder": false,
       "has_claude_md": false,
       "claude_settings": null,
-      "size_bytes": 18948096,
-      "size_human": "18.1 MB",
+      "size_bytes": 83968,
+      "size_human": "82.0 KB",
       "stars": 0,
       "forks": 0,
       "watchers": 0,
@@ -2454,30 +2013,31 @@
           "url": "https://github.com/padrian2s"
         }
       ],
-      "primary_language": "Unknown",
+      "primary_language": "JavaScript",
       "topics": [],
-      "created_at": "2025-12-25T19:39:33Z",
-      "first_commit_date": "2025-12-25T19:39:33Z",
-      "last_commit_date": "2025-12-25T19:51:35Z",
+      "created_at": "2026-01-01T13:08:16Z",
+      "first_commit_date": "2026-01-01T13:08:16Z",
+      "last_commit_date": "2026-01-01T13:14:33Z",
       "is_fork": false,
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/git-scan/",
       "commit_stats": {
         "calendar": {
-          "2025-12-25": 2
+          "2026-01-01": 2
         },
         "human_calendar": {
-          "2025-12-25": 1
+          "2026-01-01": 2
         },
-        "ai_calendar": {
-          "2025-12-25": 1
-        },
+        "ai_calendar": {},
         "total_commits": 2,
-        "human_commits": 1,
-        "ai_commits": 1,
+        "human_commits": 2,
+        "ai_commits": 0,
         "ai_breakdown": {
-          "claude": 1,
+          "claude": 0,
           "copilot": 0,
           "gpt": 0,
           "cursor": 0,
@@ -2486,26 +2046,26 @@
         },
         "recent_commits": [
           {
-            "sha": "2db825f",
-            "message": "Configure for GitHub Pages deployment",
+            "sha": "cea93ca",
+            "message": "Add GitHub Pages link badge to repo cards",
             "author": "adrian",
-            "date": "2025-12-25",
-            "isAI": true,
-            "aiType": "claude",
-            "url": "https://github.com/nstarx/nstarx-vue/commit/2db825f5a330207725cc761733550a2e8cfaa7e5"
-          },
-          {
-            "sha": "553ad6b",
-            "message": "first commit",
-            "author": "adrian",
-            "date": "2025-12-25",
+            "date": "2026-01-01",
             "isAI": false,
             "aiType": null,
-            "url": "https://github.com/nstarx/nstarx-vue/commit/553ad6b3628d292db7195a56a22f5de9ffa23e52"
+            "url": "https://github.com/nstarx/git-scan/commit/cea93cacd1d74fb3dbd7a708a092e7d221bfe142"
+          },
+          {
+            "sha": "e3a00a8",
+            "message": "first commit",
+            "author": "adrian",
+            "date": "2026-01-01",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/git-scan/commit/e3a00a8a581b24a02a4713b2bae97923ecc16ade"
           }
         ],
         "contributors_human": 1,
-        "contributors_ai": 1
+        "contributors_ai": 0
       },
       "popularity_score": 55.2,
       "score_breakdown": {
@@ -2517,7 +2077,7 @@
         "watchers": 0
       },
       "score_max": 350,
-      "project_type": "ai-assisted"
+      "project_type": "human"
     },
     {
       "name": "ds",
@@ -2583,6 +2143,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -2613,6 +2176,142 @@
       },
       "score_max": 350,
       "project_type": "human"
+    },
+    {
+      "name": "claude-memory",
+      "full_name": "nstarx/claude-memory",
+      "url": "https://github.com/nstarx/claude-memory",
+      "description": "No description available",
+      "has_claude_folder": false,
+      "has_claude_md": false,
+      "claude_settings": null,
+      "size_bytes": 39936,
+      "size_human": "39.0 KB",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_issues": 0,
+      "commit_count": 6,
+      "branch_count": 3,
+      "contributor_count": 2,
+      "contributors": [
+        {
+          "login": "padrian2s",
+          "avatar": "https://avatars.githubusercontent.com/u/423459?v=4",
+          "contributions": 4,
+          "url": "https://github.com/padrian2s"
+        },
+        {
+          "login": "claude",
+          "avatar": "https://avatars.githubusercontent.com/u/81847?v=4",
+          "contributions": 2,
+          "url": "https://github.com/claude"
+        }
+      ],
+      "primary_language": "Unknown",
+      "topics": [],
+      "created_at": "2025-12-25T19:35:55Z",
+      "first_commit_date": "2025-12-25T19:35:55Z",
+      "last_commit_date": "2025-12-29T05:55:08Z",
+      "is_fork": false,
+      "is_archived": false,
+      "default_branch": "main",
+      "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/claude-memory/",
+      "commit_stats": {
+        "calendar": {
+          "2025-12-29": 4,
+          "2025-12-25": 2
+        },
+        "human_calendar": {
+          "2025-12-25": 2
+        },
+        "ai_calendar": {
+          "2025-12-29": 4
+        },
+        "total_commits": 6,
+        "human_commits": 2,
+        "ai_commits": 4,
+        "ai_breakdown": {
+          "claude": 4,
+          "copilot": 0,
+          "gpt": 0,
+          "cursor": 0,
+          "generic": 0,
+          "bot": 0
+        },
+        "recent_commits": [
+          {
+            "sha": "2705f60",
+            "message": "Merge pull request #2 from nstarx/claude/add-skills-charts-w26IS",
+            "author": "Adrian Paleacu",
+            "date": "2025-12-29",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/claude-memory/commit/2705f604551e9d66f659c25b787d5b4dfe3cb0a1"
+          },
+          {
+            "sha": "63ce72e",
+            "message": "Add interactive charts and graphs for skills visualization",
+            "author": "Claude",
+            "date": "2025-12-29",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/claude-memory/commit/63ce72e5e3ca9ce8f4641e9878b7a3486f4e3dea"
+          },
+          {
+            "sha": "9c16b58",
+            "message": "Merge pull request #1 from nstarx/claude/create-skills-top-charts-5lvNm",
+            "author": "Adrian Paleacu",
+            "date": "2025-12-29",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/claude-memory/commit/9c16b58809f1f108435644cda8e6072f7e805aa5"
+          },
+          {
+            "sha": "f59701b",
+            "message": "Add Skills Top Charts page",
+            "author": "Claude",
+            "date": "2025-12-29",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/claude-memory/commit/f59701b83ec4cb9b1b379ce2a36811ebc330f3cf"
+          },
+          {
+            "sha": "ae1da21",
+            "message": "Trigger deploy",
+            "author": "adrian",
+            "date": "2025-12-25",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/claude-memory/commit/ae1da215cf923945f136097c7cb1fb958a014c6f"
+          },
+          {
+            "sha": "9934b45",
+            "message": "first commit",
+            "author": "adrian",
+            "date": "2025-12-25",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/claude-memory/commit/9934b45ad8d36967b2427bfa9a74e8d9cba6c102"
+          }
+        ],
+        "contributors_human": 1,
+        "contributors_ai": 2
+      },
+      "popularity_score": 50.6,
+      "score_breakdown": {
+        "stars": 0,
+        "forks": 0,
+        "commits": 0.6,
+        "activity": 40,
+        "contributors": 10,
+        "watchers": 0
+      },
+      "score_max": 350,
+      "project_type": "ai-assisted"
     },
     {
       "name": "claude_internals",
@@ -2648,6 +2347,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/claude_internals/",
       "commit_stats": {
         "calendar": {
           "2025-12-23": 1,
@@ -2864,6 +2566,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-04-28": 5,
@@ -3046,6 +2751,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -3111,6 +2819,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/DLNP_Agents/",
       "commit_stats": {
         "calendar": {
           "2025-12-20": 2,
@@ -3287,6 +2998,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-10-10": 2,
@@ -3449,6 +3163,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-12-17": 9
@@ -3569,15 +3286,15 @@
       "project_type": "ai-heavy"
     },
     {
-      "name": "NeurIPS",
-      "full_name": "nstarx/NeurIPS",
-      "url": "https://github.com/nstarx/NeurIPS",
+      "name": "PaperDecoded",
+      "full_name": "nstarx/PaperDecoded",
+      "url": "https://github.com/nstarx/PaperDecoded",
       "description": "No description available",
       "has_claude_folder": false,
-      "has_claude_md": false,
+      "has_claude_md": true,
       "claude_settings": null,
-      "size_bytes": 48128,
-      "size_human": "47.0 KB",
+      "size_bytes": 48130048,
+      "size_human": "45.9 MB",
       "stars": 0,
       "forks": 0,
       "watchers": 0,
@@ -3595,30 +3312,31 @@
       ],
       "primary_language": "HTML",
       "topics": [],
-      "created_at": "2025-12-05T06:14:41Z",
-      "first_commit_date": "2025-12-05T06:14:41Z",
-      "last_commit_date": "2025-12-06T11:14:15Z",
+      "created_at": "2025-12-29T07:15:59Z",
+      "first_commit_date": "2025-12-29T07:15:59Z",
+      "last_commit_date": "2025-12-29T16:18:31Z",
       "is_fork": false,
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/PaperDecoded/",
       "commit_stats": {
         "calendar": {
-          "2025-12-06": 4,
-          "2025-12-05": 2
+          "2025-12-29": 6
         },
         "human_calendar": {
-          "2025-12-06": 3,
-          "2025-12-05": 2
+          "2025-12-29": 1
         },
         "ai_calendar": {
-          "2025-12-06": 1
+          "2025-12-29": 5
         },
         "total_commits": 6,
-        "human_commits": 5,
-        "ai_commits": 1,
+        "human_commits": 1,
+        "ai_commits": 5,
         "ai_breakdown": {
-          "claude": 1,
+          "claude": 5,
           "copilot": 0,
           "gpt": 0,
           "cursor": 0,
@@ -3627,58 +3345,58 @@
         },
         "recent_commits": [
           {
-            "sha": "cfd1ddb",
-            "message": "Add navigation links to NeurIPS explorer",
+            "sha": "6499b61",
+            "message": "Fix text colors and add citation heatmap to cards",
             "author": "adrian",
-            "date": "2025-12-06",
+            "date": "2025-12-29",
             "isAI": true,
             "aiType": "claude",
-            "url": "https://github.com/nstarx/NeurIPS/commit/cfd1ddb849f0ca5771717811795327f746bb78f6"
+            "url": "https://github.com/nstarx/PaperDecoded/commit/6499b61ef626031e7b87da3240e1fcf8ca1cfdfe"
           },
           {
-            "sha": "28e3665",
-            "message": "Merge branch 'main' of github.com:nstarx/IPS",
+            "sha": "0c351ed",
+            "message": "Improve UI: collapsible filters, fix badge placement, separate year filters",
             "author": "adrian",
-            "date": "2025-12-06",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/NeurIPS/commit/28e3665d57f7d12a5ffa45fbdd51e4965b0c860b"
+            "date": "2025-12-29",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/PaperDecoded/commit/0c351ed095327e2d51ee844e08222f0349c0a853"
           },
           {
-            "sha": "5d7bb20",
-            "message": "added sim",
+            "sha": "7eeb3eb",
+            "message": "Add year filtering, citation badges, and sorting functionality",
             "author": "adrian",
-            "date": "2025-12-06",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/NeurIPS/commit/5d7bb2050343ab958bec2d8ec3f3af09386c6632"
+            "date": "2025-12-29",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/PaperDecoded/commit/7eeb3eb1068936daae742f511fec4201830ef4b8"
           },
           {
-            "sha": "6f4d978",
-            "message": "Update README.md",
-            "author": "Adrian Paleacu",
-            "date": "2025-12-06",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/NeurIPS/commit/6f4d978e0dec5f1aa0c94ebbf895193d75c26b8a"
+            "sha": "e3375d3",
+            "message": "Add Illusion of Thinking paper explainer",
+            "author": "adrian",
+            "date": "2025-12-29",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/PaperDecoded/commit/e3375d32774950894fd76c2f520ecbbbb8f5f565"
           },
           {
-            "sha": "f134cd1",
-            "message": "Add project URL to README",
-            "author": "Adrian Paleacu",
-            "date": "2025-12-05",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/NeurIPS/commit/f134cd198d465345a07536960ec1890e661a5768"
+            "sha": "c98b169",
+            "message": "Add 11 paper explainer pages and update index",
+            "author": "adrian",
+            "date": "2025-12-29",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/PaperDecoded/commit/c98b1696e680bab4265520acf67e6e3788fea795"
           },
           {
-            "sha": "e94eaf6",
+            "sha": "c80f195",
             "message": "first commit",
             "author": "adrian",
-            "date": "2025-12-05",
+            "date": "2025-12-29",
             "isAI": false,
             "aiType": null,
-            "url": "https://github.com/nstarx/NeurIPS/commit/e94eaf65998c89a20edf1b4af13481eb0fe18c7c"
+            "url": "https://github.com/nstarx/PaperDecoded/commit/c80f1953a64ea7e832c647ad295e356e125bf072"
           }
         ],
         "contributors_human": 1,
@@ -3694,7 +3412,7 @@
         "watchers": 0
       },
       "score_max": 350,
-      "project_type": "mixed"
+      "project_type": "ai-heavy"
     },
     {
       "name": "DLNP_UseCases",
@@ -3730,6 +3448,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/DLNP_UseCases/",
       "commit_stats": {
         "calendar": {
           "2025-12-13": 5
@@ -3845,6 +3566,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-12-17": 2,
@@ -3923,160 +3647,54 @@
       "project_type": "ai-heavy"
     },
     {
-      "name": "DLNP_Best_Human",
-      "full_name": "nstarx/DLNP_Best_Human",
-      "url": "https://github.com/nstarx/DLNP_Best_Human",
+      "name": "nstarx-vue",
+      "full_name": "nstarx/nstarx-vue",
+      "url": "https://github.com/nstarx/nstarx-vue",
       "description": "No description available",
       "has_claude_folder": false,
       "has_claude_md": false,
       "claude_settings": null,
-      "size_bytes": 60416,
-      "size_human": "59.0 KB",
+      "size_bytes": 18948096,
+      "size_human": "18.1 MB",
       "stars": 0,
       "forks": 0,
       "watchers": 0,
       "open_issues": 0,
-      "commit_count": 4,
+      "commit_count": 2,
       "branch_count": 1,
       "contributor_count": 1,
       "contributors": [
         {
           "login": "padrian2s",
           "avatar": "https://avatars.githubusercontent.com/u/423459?v=4",
-          "contributions": 4,
+          "contributions": 2,
           "url": "https://github.com/padrian2s"
         }
       ],
-      "primary_language": "JavaScript",
+      "primary_language": "Unknown",
       "topics": [],
-      "created_at": "2025-12-03T15:51:14Z",
-      "first_commit_date": "2025-12-03T15:51:14Z",
-      "last_commit_date": "2025-12-04T18:54:00Z",
+      "created_at": "2025-12-25T19:39:33Z",
+      "first_commit_date": "2025-12-25T19:39:33Z",
+      "last_commit_date": "2025-12-25T19:51:35Z",
       "is_fork": false,
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/nstarx-vue/",
       "commit_stats": {
         "calendar": {
-          "2025-12-04": 1,
-          "2025-12-03": 3
+          "2025-12-25": 2
         },
         "human_calendar": {
-          "2025-12-04": 1,
-          "2025-12-03": 3
-        },
-        "ai_calendar": {},
-        "total_commits": 4,
-        "human_commits": 4,
-        "ai_commits": 0,
-        "ai_breakdown": {
-          "claude": 0,
-          "copilot": 0,
-          "gpt": 0,
-          "cursor": 0,
-          "generic": 0,
-          "bot": 0
-        },
-        "recent_commits": [
-          {
-            "sha": "7a61946",
-            "message": "push readme",
-            "author": "adrian",
-            "date": "2025-12-04",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/DLNP_Best_Human/commit/7a619462de6206f26900686a5f30c8968c921144"
-          },
-          {
-            "sha": "a503915",
-            "message": "**Add Docker configuration for deployment and update .gitignore**",
-            "author": "adrian",
-            "date": "2025-12-03",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/DLNP_Best_Human/commit/a50391527b7622c1015b3104a72d3190cfa61b2b"
-          },
-          {
-            "sha": "d13438d",
-            "message": "**Add proctoring system for monitoring and session integrity tracking**",
-            "author": "adrian",
-            "date": "2025-12-03",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/DLNP_Best_Human/commit/d13438d01b572219fc7b9d14a3a7690c85fc0e75"
-          },
-          {
-            "sha": "ce86fc3",
-            "message": "**Add agent dashboard template and example result data**",
-            "author": "adrian",
-            "date": "2025-12-03",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/DLNP_Best_Human/commit/ce86fc3e37fa584bc4ef469cfec9c376f44bc21d"
-          }
-        ],
-        "contributors_human": 1,
-        "contributors_ai": 0
-      },
-      "popularity_score": 45.4,
-      "score_breakdown": {
-        "stars": 0,
-        "forks": 0,
-        "commits": 0.4,
-        "activity": 40,
-        "contributors": 5,
-        "watchers": 0
-      },
-      "score_max": 350,
-      "project_type": "human"
-    },
-    {
-      "name": "polarization_by_design",
-      "full_name": "nstarx/polarization_by_design",
-      "url": "https://github.com/nstarx/polarization_by_design",
-      "description": "No description available",
-      "has_claude_folder": false,
-      "has_claude_md": false,
-      "claude_settings": null,
-      "size_bytes": 2220032,
-      "size_human": "2.1 MB",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "open_issues": 0,
-      "commit_count": 3,
-      "branch_count": 1,
-      "contributor_count": 1,
-      "contributors": [
-        {
-          "login": "padrian2s",
-          "avatar": "https://avatars.githubusercontent.com/u/423459?v=4",
-          "contributions": 3,
-          "url": "https://github.com/padrian2s"
-        }
-      ],
-      "primary_language": "HTML",
-      "topics": [],
-      "created_at": "2025-12-05T19:43:52Z",
-      "first_commit_date": "2025-12-05T19:43:52Z",
-      "last_commit_date": "2025-12-06T07:26:13Z",
-      "is_fork": false,
-      "is_archived": false,
-      "default_branch": "main",
-      "license": null,
-      "commit_stats": {
-        "calendar": {
-          "2025-12-06": 1,
-          "2025-12-05": 2
-        },
-        "human_calendar": {
-          "2025-12-05": 2
+          "2025-12-25": 1
         },
         "ai_calendar": {
-          "2025-12-06": 1
+          "2025-12-25": 1
         },
-        "total_commits": 3,
-        "human_commits": 2,
+        "total_commits": 2,
+        "human_commits": 1,
         "ai_commits": 1,
         "ai_breakdown": {
           "claude": 1,
@@ -4088,41 +3706,32 @@
         },
         "recent_commits": [
           {
-            "sha": "9029413",
-            "message": "Add AI moral foundation simulator and enhance polarization simulator",
+            "sha": "2db825f",
+            "message": "Configure for GitHub Pages deployment",
             "author": "adrian",
-            "date": "2025-12-06",
+            "date": "2025-12-25",
             "isAI": true,
             "aiType": "claude",
-            "url": "https://github.com/nstarx/polarization_by_design/commit/90294135afa6b12cb280c155e4b998b20d0de742"
+            "url": "https://github.com/nstarx/nstarx-vue/commit/2db825f5a330207725cc761733550a2e8cfaa7e5"
           },
           {
-            "sha": "383ba2b",
-            "message": "added readme",
-            "author": "adrian",
-            "date": "2025-12-05",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/polarization_by_design/commit/383ba2b251d281b3b1cadf7355a167d064bcb8a1"
-          },
-          {
-            "sha": "5cd4ceb",
+            "sha": "553ad6b",
             "message": "first commit",
             "author": "adrian",
-            "date": "2025-12-05",
+            "date": "2025-12-25",
             "isAI": false,
             "aiType": null,
-            "url": "https://github.com/nstarx/polarization_by_design/commit/5cd4ceb505d4bc05275a6df84aeef62b84342ab4"
+            "url": "https://github.com/nstarx/nstarx-vue/commit/553ad6b3628d292db7195a56a22f5de9ffa23e52"
           }
         ],
         "contributors_human": 1,
         "contributors_ai": 1
       },
-      "popularity_score": 45.3,
+      "popularity_score": 45.2,
       "score_breakdown": {
         "stars": 0,
         "forks": 0,
-        "commits": 0.3,
+        "commits": 0.2,
         "activity": 40,
         "contributors": 5,
         "watchers": 0
@@ -4194,6 +3803,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -4271,6 +3883,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-28": 2,
@@ -4450,6 +4065,193 @@
       "project_type": "human"
     },
     {
+      "name": "dh-poc",
+      "full_name": "nstarx/dh-poc",
+      "url": "https://github.com/nstarx/dh-poc",
+      "description": "Digital Human Command Centre Proof-of-concept",
+      "has_claude_folder": false,
+      "has_claude_md": false,
+      "claude_settings": null,
+      "size_bytes": 32239616,
+      "size_human": "30.7 MB",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_issues": 0,
+      "commit_count": 19,
+      "branch_count": 4,
+      "contributor_count": 3,
+      "contributors": [
+        {
+          "login": "bohemia420",
+          "avatar": "https://avatars.githubusercontent.com/u/3143799?v=4",
+          "contributions": 14,
+          "url": "https://github.com/bohemia420"
+        },
+        {
+          "login": "SidKondapuram",
+          "avatar": "https://avatars.githubusercontent.com/u/28262280?v=4",
+          "contributions": 3,
+          "url": "https://github.com/SidKondapuram"
+        },
+        {
+          "login": "sai-inguva",
+          "avatar": "https://avatars.githubusercontent.com/u/174418117?v=4",
+          "contributions": 2,
+          "url": "https://github.com/sai-inguva"
+        }
+      ],
+      "primary_language": "Python",
+      "topics": [],
+      "created_at": "2025-11-03T09:58:19Z",
+      "first_commit_date": "2025-11-03T09:58:19Z",
+      "last_commit_date": "2025-12-04T19:27:41Z",
+      "is_fork": false,
+      "is_archived": false,
+      "default_branch": "main",
+      "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
+      "commit_stats": {
+        "calendar": {
+          "2025-11-24": 2,
+          "2025-11-11": 1,
+          "2025-11-10": 3,
+          "2025-11-06": 2,
+          "2025-11-07": 2,
+          "2025-11-05": 2,
+          "2025-11-03": 7
+        },
+        "human_calendar": {
+          "2025-11-24": 2,
+          "2025-11-11": 1,
+          "2025-11-10": 3,
+          "2025-11-06": 2,
+          "2025-11-07": 2,
+          "2025-11-05": 2,
+          "2025-11-03": 7
+        },
+        "ai_calendar": {},
+        "total_commits": 19,
+        "human_commits": 19,
+        "ai_commits": 0,
+        "ai_breakdown": {
+          "claude": 0,
+          "copilot": 0,
+          "gpt": 0,
+          "cursor": 0,
+          "generic": 0,
+          "bot": 0
+        },
+        "recent_commits": [
+          {
+            "sha": "8472027",
+            "message": "Added FastAPI backend into dh-poc repository",
+            "author": "singuva",
+            "date": "2025-11-24",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/dh-poc/commit/84720275e7d4cfb2d2391710e87991be3c180c06"
+          },
+          {
+            "sha": "2efcf2a",
+            "message": "keyclok",
+            "author": "singuva",
+            "date": "2025-11-24",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/dh-poc/commit/2efcf2add0d2af1452751b8585fe1e150914eda0"
+          },
+          {
+            "sha": "e2d80e8",
+            "message": "Rewrite to remove Keycloak direct calls",
+            "author": "Sid Kondapuram",
+            "date": "2025-11-11",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/dh-poc/commit/e2d80e895541399f2d79e48337fd9752f8c1a364"
+          },
+          {
+            "sha": "20e89b0",
+            "message": "Merge pull request #4 from nstarx/k3s-experiment",
+            "author": "Sumit Khanna",
+            "date": "2025-11-10",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/dh-poc/commit/20e89b0e361593ce3221acf465c6495b4c168a7d"
+          },
+          {
+            "sha": "87db175",
+            "message": "truncated all responses, parametrized /logs",
+            "author": "bohemia420",
+            "date": "2025-11-10",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/dh-poc/commit/87db1755d6114c477ef31fe5494770a45738f37d"
+          },
+          {
+            "sha": "3e11083",
+            "message": "trimmed api responses, GET",
+            "author": "bohemia420",
+            "date": "2025-11-10",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/dh-poc/commit/3e110836faedea8059fd0ba45c3073189bc3dcfa"
+          },
+          {
+            "sha": "bc0fea6",
+            "message": "Keycloak initialization",
+            "author": "Sid Kondapuram",
+            "date": "2025-11-06",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/dh-poc/commit/bc0fea6a357f412ebc0b38dd17d668535980ac6b"
+          },
+          {
+            "sha": "1b565d1",
+            "message": "Merge pull request #3 from nstarx/k3s-experiment",
+            "author": "Sumit Khanna",
+            "date": "2025-11-07",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/dh-poc/commit/1b565d1ed2ee84363f5b37ce78177c31f2fa0d4e"
+          },
+          {
+            "sha": "99d4e74",
+            "message": "working delete/restart of pods",
+            "author": "bohemia420",
+            "date": "2025-11-07",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/dh-poc/commit/99d4e7487f13e54d78f9b14773440bd264938685"
+          },
+          {
+            "sha": "0224f8e",
+            "message": "working logs streaming",
+            "author": "bohemia420",
+            "date": "2025-11-06",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/dh-poc/commit/0224f8ed0f90e756104c1c8a06753f3f86775c1d"
+          }
+        ],
+        "contributors_human": 3,
+        "contributors_ai": 0
+      },
+      "popularity_score": 41.9,
+      "score_breakdown": {
+        "stars": 0,
+        "forks": 0,
+        "commits": 1.9,
+        "activity": 25,
+        "contributors": 15,
+        "watchers": 0
+      },
+      "score_max": 350,
+      "project_type": "human"
+    },
+    {
       "name": "scraping-tool",
       "full_name": "nstarx/scraping-tool",
       "url": "https://github.com/nstarx/scraping-tool",
@@ -4507,6 +4309,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-22": 1,
@@ -4717,6 +4522,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-04-08": 1,
@@ -4907,6 +4715,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-16": 6,
@@ -5113,6 +4924,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-11-27": 1,
@@ -5287,6 +5101,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-11-29": 3,
@@ -5410,6 +5227,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-11-26": 2
@@ -5498,6 +5318,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-01-17": 1,
@@ -5606,6 +5429,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-14": 1,
@@ -5804,6 +5630,9 @@
       "is_archived": true,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-10-20": 1,
@@ -5975,6 +5804,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-11-21": 2,
@@ -6112,169 +5944,6 @@
       "project_type": "ai-assisted"
     },
     {
-      "name": "DLNP_API_Garden",
-      "full_name": "nstarx/DLNP_API_Garden",
-      "url": "https://github.com/nstarx/DLNP_API_Garden",
-      "description": "No description available",
-      "has_claude_folder": false,
-      "has_claude_md": true,
-      "claude_settings": null,
-      "size_bytes": 2289664,
-      "size_human": "2.2 MB",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "open_issues": 0,
-      "commit_count": 9,
-      "branch_count": 1,
-      "contributor_count": 1,
-      "contributors": [
-        {
-          "login": "padrian2s",
-          "avatar": "https://avatars.githubusercontent.com/u/423459?v=4",
-          "contributions": 9,
-          "url": "https://github.com/padrian2s"
-        }
-      ],
-      "primary_language": "JavaScript",
-      "topics": [],
-      "created_at": "2025-08-27T10:47:04Z",
-      "first_commit_date": "2025-08-27T10:47:04Z",
-      "last_commit_date": "2025-10-07T16:53:25Z",
-      "is_fork": false,
-      "is_archived": false,
-      "default_branch": "main",
-      "license": null,
-      "commit_stats": {
-        "calendar": {
-          "2025-10-07": 1,
-          "2025-09-03": 1,
-          "2025-08-31": 2,
-          "2025-08-29": 1,
-          "2025-08-28": 2,
-          "2025-08-27": 1,
-          "2025-08-26": 1
-        },
-        "human_calendar": {
-          "2025-10-07": 1,
-          "2025-09-03": 1,
-          "2025-08-31": 2,
-          "2025-08-29": 1,
-          "2025-08-28": 2,
-          "2025-08-27": 1,
-          "2025-08-26": 1
-        },
-        "ai_calendar": {},
-        "total_commits": 9,
-        "human_commits": 9,
-        "ai_commits": 0,
-        "ai_breakdown": {
-          "claude": 0,
-          "copilot": 0,
-          "gpt": 0,
-          "cursor": 0,
-          "generic": 0,
-          "bot": 0
-        },
-        "recent_commits": [
-          {
-            "sha": "e13159e",
-            "message": "Revamped README to introduce \"API Design Documentation Hub,\" highlighting featur",
-            "author": "adrian",
-            "date": "2025-10-07",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/e13159e7ca18e52589cc5a3097494d9c5b9cfff2"
-          },
-          {
-            "sha": "d1470d8",
-            "message": "Added pagination to all list endpoints, enhanced authentication specs, standardi",
-            "author": "adrian",
-            "date": "2025-09-03",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/d1470d8cd230b67272bd4c3bb6fefe7199dc88ce"
-          },
-          {
-            "sha": "4326f77",
-            "message": "Improved mobile responsiveness and added mobile menu functionality to index.html",
-            "author": "adrian",
-            "date": "2025-08-31",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/4326f7764e5c4041b4890e3896374aeebd8dd2fe"
-          },
-          {
-            "sha": "c98e67e",
-            "message": "added tool to stats the md",
-            "author": "adrian",
-            "date": "2025-08-31",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/c98e67eb2f0ed320cd6bb9eb10661d6363c7ee16"
-          },
-          {
-            "sha": "cd431c3",
-            "message": "Added API Sequence Builder with UI and functionality, including API explorer, se",
-            "author": "adrian",
-            "date": "2025-08-29",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/cd431c3ee5f13a7658c87974e59feca6417dc19c"
-          },
-          {
-            "sha": "b6b71e3",
-            "message": "Integrated Mermaid diagram viewer with theme toggling and zoom functionality dir",
-            "author": "adrian",
-            "date": "2025-08-28",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/b6b71e389361ee6873c20542ce85f17b14f85e17"
-          },
-          {
-            "sha": "a0afd99",
-            "message": "Updated entity relationship diagrams with Mermaid.js, added descriptive relation",
-            "author": "adrian",
-            "date": "2025-08-28",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/a0afd99adc2262fdcb014591f3e17ac084ab9123"
-          },
-          {
-            "sha": "a429449",
-            "message": "added apis",
-            "author": "adrian",
-            "date": "2025-08-27",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/a429449c01dff4688d3da9be5fe6744d03325124"
-          },
-          {
-            "sha": "8e820dc",
-            "message": "initial",
-            "author": "adrian",
-            "date": "2025-08-26",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/8e820dcec62db8a53d9b7a9464e123737d28b32b"
-          }
-        ],
-        "contributors_human": 1,
-        "contributors_ai": 0
-      },
-      "popularity_score": 30.9,
-      "score_breakdown": {
-        "stars": 0,
-        "forks": 0,
-        "commits": 0.9,
-        "activity": 25,
-        "contributors": 5,
-        "watchers": 0
-      },
-      "score_max": 350,
-      "project_type": "ai-assisted"
-    },
-    {
       "name": "pulse_prana2",
       "full_name": "nstarx/pulse_prana2",
       "url": "https://github.com/nstarx/pulse_prana2",
@@ -6308,6 +5977,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-11-26": 2,
@@ -6461,6 +6133,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-11-04": 8
@@ -6570,54 +6245,59 @@
       "project_type": "human"
     },
     {
-      "name": "RAG_phase2",
-      "full_name": "nstarx/RAG_phase2",
-      "url": "https://github.com/nstarx/RAG_phase2",
-      "description": "This repo implements a Retrieval-Augmented Generation (RAG) assistant of DH second phase project",
+      "name": "NeurIPS",
+      "full_name": "nstarx/NeurIPS",
+      "url": "https://github.com/nstarx/NeurIPS",
+      "description": "No description available",
       "has_claude_folder": false,
       "has_claude_md": false,
       "claude_settings": null,
-      "size_bytes": 97280,
-      "size_human": "95.0 KB",
+      "size_bytes": 48128,
+      "size_human": "47.0 KB",
       "stars": 0,
       "forks": 0,
       "watchers": 0,
       "open_issues": 0,
-      "commit_count": 5,
+      "commit_count": 6,
       "branch_count": 1,
       "contributor_count": 1,
       "contributors": [
         {
-          "login": "yassirbenhammou",
-          "avatar": "https://avatars.githubusercontent.com/u/92153964?v=4",
-          "contributions": 5,
-          "url": "https://github.com/yassirbenhammou"
+          "login": "padrian2s",
+          "avatar": "https://avatars.githubusercontent.com/u/423459?v=4",
+          "contributions": 6,
+          "url": "https://github.com/padrian2s"
         }
       ],
-      "primary_language": "Python",
+      "primary_language": "HTML",
       "topics": [],
-      "created_at": "2025-10-02T12:16:53Z",
-      "first_commit_date": "2025-10-02T12:16:53Z",
-      "last_commit_date": "2025-10-07T12:54:22Z",
+      "created_at": "2025-12-05T06:14:41Z",
+      "first_commit_date": "2025-12-05T06:14:41Z",
+      "last_commit_date": "2025-12-06T11:14:15Z",
       "is_fork": false,
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/NeurIPS/",
       "commit_stats": {
         "calendar": {
-          "2025-10-07": 2,
-          "2025-10-02": 3
+          "2025-12-06": 4,
+          "2025-12-05": 2
         },
         "human_calendar": {
-          "2025-10-07": 2,
-          "2025-10-02": 3
+          "2025-12-06": 3,
+          "2025-12-05": 2
         },
-        "ai_calendar": {},
-        "total_commits": 5,
+        "ai_calendar": {
+          "2025-12-06": 1
+        },
+        "total_commits": 6,
         "human_commits": 5,
-        "ai_commits": 0,
+        "ai_commits": 1,
         "ai_breakdown": {
-          "claude": 0,
+          "claude": 1,
           "copilot": 0,
           "gpt": 0,
           "cursor": 0,
@@ -6626,65 +6306,74 @@
         },
         "recent_commits": [
           {
-            "sha": "faac82c",
-            "message": "Update requirements.txt",
-            "author": "Yassir Benhammou",
-            "date": "2025-10-07",
-            "isAI": false,
-            "aiType": null,
-            "url": "https://github.com/nstarx/RAG_phase2/commit/faac82cd479aba792e2ec5ba5926f20e3b484643"
+            "sha": "cfd1ddb",
+            "message": "Add navigation links to NeurIPS explorer",
+            "author": "adrian",
+            "date": "2025-12-06",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/NeurIPS/commit/cfd1ddb849f0ca5771717811795327f746bb78f6"
           },
           {
-            "sha": "2467e64",
-            "message": "Update parsing and rag app to support new ppt docs, add autogen evaluation pipel",
-            "author": "Yassir Benhammou",
-            "date": "2025-10-07",
+            "sha": "28e3665",
+            "message": "Merge branch 'main' of github.com:nstarx/IPS",
+            "author": "adrian",
+            "date": "2025-12-06",
             "isAI": false,
             "aiType": null,
-            "url": "https://github.com/nstarx/RAG_phase2/commit/2467e640c5d2cbafbc9dc39b5451c8f87bc58f5b"
+            "url": "https://github.com/nstarx/NeurIPS/commit/28e3665d57f7d12a5ffa45fbdd51e4965b0c860b"
           },
           {
-            "sha": "503db33",
-            "message": "Initial commit phase2",
-            "author": "Yassir Benhammou",
-            "date": "2025-10-02",
+            "sha": "5d7bb20",
+            "message": "added sim",
+            "author": "adrian",
+            "date": "2025-12-06",
             "isAI": false,
             "aiType": null,
-            "url": "https://github.com/nstarx/RAG_phase2/commit/503db3327a22d10fb8e2a27f0031d52cc898f6e1"
+            "url": "https://github.com/nstarx/NeurIPS/commit/5d7bb2050343ab958bec2d8ec3f3af09386c6632"
           },
           {
-            "sha": "964e77e",
-            "message": "Merge",
-            "author": "Yassir Benhammou",
-            "date": "2025-10-02",
+            "sha": "6f4d978",
+            "message": "Update README.md",
+            "author": "Adrian Paleacu",
+            "date": "2025-12-06",
             "isAI": false,
             "aiType": null,
-            "url": "https://github.com/nstarx/RAG_phase2/commit/964e77edd3699403a2a8e91fdaaba8cb173c1208"
+            "url": "https://github.com/nstarx/NeurIPS/commit/6f4d978e0dec5f1aa0c94ebbf895193d75c26b8a"
           },
           {
-            "sha": "0a732d1",
-            "message": "Initial commit",
-            "author": "Yassir Benhammou",
-            "date": "2025-10-02",
+            "sha": "f134cd1",
+            "message": "Add project URL to README",
+            "author": "Adrian Paleacu",
+            "date": "2025-12-05",
             "isAI": false,
             "aiType": null,
-            "url": "https://github.com/nstarx/RAG_phase2/commit/0a732d1284d46c3f14dbdd56f7eaed2094900aea"
+            "url": "https://github.com/nstarx/NeurIPS/commit/f134cd198d465345a07536960ec1890e661a5768"
+          },
+          {
+            "sha": "e94eaf6",
+            "message": "first commit",
+            "author": "adrian",
+            "date": "2025-12-05",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/NeurIPS/commit/e94eaf65998c89a20edf1b4af13481eb0fe18c7c"
           }
         ],
-        "contributors_human": 2,
-        "contributors_ai": 0
+        "contributors_human": 1,
+        "contributors_ai": 1
       },
-      "popularity_score": 30.5,
+      "popularity_score": 30.6,
       "score_breakdown": {
         "stars": 0,
         "forks": 0,
-        "commits": 0.5,
+        "commits": 0.6,
         "activity": 25,
         "contributors": 5,
         "watchers": 0
       },
       "score_max": 350,
-      "project_type": "human"
+      "project_type": "mixed"
     },
     {
       "name": "DLNP_example-remote-app",
@@ -6720,6 +6409,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-06": 4,
@@ -6806,6 +6498,117 @@
       "project_type": "ai-assisted"
     },
     {
+      "name": "DLNP_Best_Human",
+      "full_name": "nstarx/DLNP_Best_Human",
+      "url": "https://github.com/nstarx/DLNP_Best_Human",
+      "description": "No description available",
+      "has_claude_folder": false,
+      "has_claude_md": false,
+      "claude_settings": null,
+      "size_bytes": 60416,
+      "size_human": "59.0 KB",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_issues": 0,
+      "commit_count": 4,
+      "branch_count": 1,
+      "contributor_count": 1,
+      "contributors": [
+        {
+          "login": "padrian2s",
+          "avatar": "https://avatars.githubusercontent.com/u/423459?v=4",
+          "contributions": 4,
+          "url": "https://github.com/padrian2s"
+        }
+      ],
+      "primary_language": "JavaScript",
+      "topics": [],
+      "created_at": "2025-12-03T15:51:14Z",
+      "first_commit_date": "2025-12-03T15:51:14Z",
+      "last_commit_date": "2025-12-04T18:54:00Z",
+      "is_fork": false,
+      "is_archived": false,
+      "default_branch": "main",
+      "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
+      "commit_stats": {
+        "calendar": {
+          "2025-12-04": 1,
+          "2025-12-03": 3
+        },
+        "human_calendar": {
+          "2025-12-04": 1,
+          "2025-12-03": 3
+        },
+        "ai_calendar": {},
+        "total_commits": 4,
+        "human_commits": 4,
+        "ai_commits": 0,
+        "ai_breakdown": {
+          "claude": 0,
+          "copilot": 0,
+          "gpt": 0,
+          "cursor": 0,
+          "generic": 0,
+          "bot": 0
+        },
+        "recent_commits": [
+          {
+            "sha": "7a61946",
+            "message": "push readme",
+            "author": "adrian",
+            "date": "2025-12-04",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/DLNP_Best_Human/commit/7a619462de6206f26900686a5f30c8968c921144"
+          },
+          {
+            "sha": "a503915",
+            "message": "**Add Docker configuration for deployment and update .gitignore**",
+            "author": "adrian",
+            "date": "2025-12-03",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/DLNP_Best_Human/commit/a50391527b7622c1015b3104a72d3190cfa61b2b"
+          },
+          {
+            "sha": "d13438d",
+            "message": "**Add proctoring system for monitoring and session integrity tracking**",
+            "author": "adrian",
+            "date": "2025-12-03",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/DLNP_Best_Human/commit/d13438d01b572219fc7b9d14a3a7690c85fc0e75"
+          },
+          {
+            "sha": "ce86fc3",
+            "message": "**Add agent dashboard template and example result data**",
+            "author": "adrian",
+            "date": "2025-12-03",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/DLNP_Best_Human/commit/ce86fc3e37fa584bc4ef469cfec9c376f44bc21d"
+          }
+        ],
+        "contributors_human": 1,
+        "contributors_ai": 0
+      },
+      "popularity_score": 30.4,
+      "score_breakdown": {
+        "stars": 0,
+        "forks": 0,
+        "commits": 0.4,
+        "activity": 25,
+        "contributors": 5,
+        "watchers": 0
+      },
+      "score_max": 350,
+      "project_type": "human"
+    },
+    {
       "name": "HealthStream_Find_A_Doctor_POC",
       "full_name": "nstarx/HealthStream_Find_A_Doctor_POC",
       "url": "https://github.com/nstarx/HealthStream_Find_A_Doctor_POC",
@@ -6839,6 +6642,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-10-11": 1,
@@ -6914,6 +6720,109 @@
       "project_type": "ai-assisted"
     },
     {
+      "name": "polarization_by_design",
+      "full_name": "nstarx/polarization_by_design",
+      "url": "https://github.com/nstarx/polarization_by_design",
+      "description": "No description available",
+      "has_claude_folder": false,
+      "has_claude_md": false,
+      "claude_settings": null,
+      "size_bytes": 2220032,
+      "size_human": "2.1 MB",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_issues": 0,
+      "commit_count": 3,
+      "branch_count": 1,
+      "contributor_count": 1,
+      "contributors": [
+        {
+          "login": "padrian2s",
+          "avatar": "https://avatars.githubusercontent.com/u/423459?v=4",
+          "contributions": 3,
+          "url": "https://github.com/padrian2s"
+        }
+      ],
+      "primary_language": "HTML",
+      "topics": [],
+      "created_at": "2025-12-05T19:43:52Z",
+      "first_commit_date": "2025-12-05T19:43:52Z",
+      "last_commit_date": "2025-12-06T07:26:13Z",
+      "is_fork": false,
+      "is_archived": false,
+      "default_branch": "main",
+      "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/polarization_by_design/",
+      "commit_stats": {
+        "calendar": {
+          "2025-12-06": 1,
+          "2025-12-05": 2
+        },
+        "human_calendar": {
+          "2025-12-05": 2
+        },
+        "ai_calendar": {
+          "2025-12-06": 1
+        },
+        "total_commits": 3,
+        "human_commits": 2,
+        "ai_commits": 1,
+        "ai_breakdown": {
+          "claude": 1,
+          "copilot": 0,
+          "gpt": 0,
+          "cursor": 0,
+          "generic": 0,
+          "bot": 0
+        },
+        "recent_commits": [
+          {
+            "sha": "9029413",
+            "message": "Add AI moral foundation simulator and enhance polarization simulator",
+            "author": "adrian",
+            "date": "2025-12-06",
+            "isAI": true,
+            "aiType": "claude",
+            "url": "https://github.com/nstarx/polarization_by_design/commit/90294135afa6b12cb280c155e4b998b20d0de742"
+          },
+          {
+            "sha": "383ba2b",
+            "message": "added readme",
+            "author": "adrian",
+            "date": "2025-12-05",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/polarization_by_design/commit/383ba2b251d281b3b1cadf7355a167d064bcb8a1"
+          },
+          {
+            "sha": "5cd4ceb",
+            "message": "first commit",
+            "author": "adrian",
+            "date": "2025-12-05",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/polarization_by_design/commit/5cd4ceb505d4bc05275a6df84aeef62b84342ab4"
+          }
+        ],
+        "contributors_human": 1,
+        "contributors_ai": 1
+      },
+      "popularity_score": 30.3,
+      "score_breakdown": {
+        "stars": 0,
+        "forks": 0,
+        "commits": 0.3,
+        "activity": 25,
+        "contributors": 5,
+        "watchers": 0
+      },
+      "score_max": 350,
+      "project_type": "ai-assisted"
+    },
+    {
       "name": "Hotz_vs_Yudkowsky",
       "full_name": "nstarx/Hotz_vs_Yudkowsky",
       "url": "https://github.com/nstarx/Hotz_vs_Yudkowsky",
@@ -6947,6 +6856,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/Hotz_vs_Yudkowsky/",
       "commit_stats": {
         "calendar": {
           "2025-11-27": 3
@@ -7046,6 +6958,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-11-18": 3
@@ -7143,6 +7058,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/DLNP_AACE/",
       "commit_stats": {
         "calendar": {
           "2025-11-15": 3
@@ -7242,6 +7160,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-11-16": 2
@@ -7332,6 +7253,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-11-04": 2
@@ -7420,6 +7344,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-11-04": 2
@@ -7520,6 +7447,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-02": 6,
@@ -7708,6 +7638,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-02-20": 4,
@@ -7890,6 +7823,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-26": 4,
@@ -8076,6 +8012,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-05": 1,
@@ -8262,6 +8201,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-08": 1,
@@ -8424,6 +8366,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-01-28": 1,
@@ -8590,6 +8535,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -8661,6 +8609,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-06-19": 4,
@@ -8849,6 +8800,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-01": 3,
@@ -9031,6 +8985,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-06-24": 1,
@@ -9209,6 +9166,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-06-26": 2,
@@ -9387,6 +9347,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-04-23": 2,
@@ -9565,6 +9528,9 @@
       "is_archived": false,
       "default_branch": "master",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-06-06": 2,
@@ -9753,6 +9719,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -9824,6 +9793,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-06-21": 1,
@@ -9998,6 +9970,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-26": 1,
@@ -10157,6 +10132,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-15": 1,
@@ -10326,6 +10304,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-03-21": 1,
@@ -10469,6 +10450,9 @@
       "is_archived": false,
       "default_branch": "master",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-06-16": 1,
@@ -10592,6 +10576,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-03-26": 1,
@@ -10719,6 +10706,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-03-13": 1,
@@ -10842,6 +10832,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-06-13": 2,
@@ -10956,6 +10949,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-20": 4
@@ -11068,6 +11064,9 @@
       "is_archived": false,
       "default_branch": "master",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-04-29": 3
@@ -11171,6 +11170,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-02-18": 3
@@ -11274,6 +11276,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-06-30": 2
@@ -11368,6 +11373,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-06-13": 2
@@ -11468,6 +11476,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -11545,6 +11556,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -11616,6 +11630,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -11681,6 +11698,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-15": 2,
@@ -11863,6 +11883,9 @@
       "is_archived": false,
       "default_branch": "master",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-26": 3,
@@ -12041,6 +12064,9 @@
       "is_archived": false,
       "default_branch": "develop",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -12112,6 +12138,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -12177,6 +12206,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-16": 1,
@@ -12353,6 +12385,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-01-14": 1
@@ -12432,6 +12467,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/DLNP_Docs/",
       "commit_stats": {
         "calendar": {
           "2025-08-27": 1,
@@ -12598,6 +12636,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-03": 4,
@@ -12729,6 +12770,172 @@
       "project_type": "human"
     },
     {
+      "name": "DLNP_API_Garden",
+      "full_name": "nstarx/DLNP_API_Garden",
+      "url": "https://github.com/nstarx/DLNP_API_Garden",
+      "description": "No description available",
+      "has_claude_folder": false,
+      "has_claude_md": true,
+      "claude_settings": null,
+      "size_bytes": 2289664,
+      "size_human": "2.2 MB",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_issues": 0,
+      "commit_count": 9,
+      "branch_count": 1,
+      "contributor_count": 1,
+      "contributors": [
+        {
+          "login": "padrian2s",
+          "avatar": "https://avatars.githubusercontent.com/u/423459?v=4",
+          "contributions": 9,
+          "url": "https://github.com/padrian2s"
+        }
+      ],
+      "primary_language": "JavaScript",
+      "topics": [],
+      "created_at": "2025-08-27T10:47:04Z",
+      "first_commit_date": "2025-08-27T10:47:04Z",
+      "last_commit_date": "2025-10-07T16:53:25Z",
+      "is_fork": false,
+      "is_archived": false,
+      "default_branch": "main",
+      "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/DLNP_API_Garden/",
+      "commit_stats": {
+        "calendar": {
+          "2025-10-07": 1,
+          "2025-09-03": 1,
+          "2025-08-31": 2,
+          "2025-08-29": 1,
+          "2025-08-28": 2,
+          "2025-08-27": 1,
+          "2025-08-26": 1
+        },
+        "human_calendar": {
+          "2025-10-07": 1,
+          "2025-09-03": 1,
+          "2025-08-31": 2,
+          "2025-08-29": 1,
+          "2025-08-28": 2,
+          "2025-08-27": 1,
+          "2025-08-26": 1
+        },
+        "ai_calendar": {},
+        "total_commits": 9,
+        "human_commits": 9,
+        "ai_commits": 0,
+        "ai_breakdown": {
+          "claude": 0,
+          "copilot": 0,
+          "gpt": 0,
+          "cursor": 0,
+          "generic": 0,
+          "bot": 0
+        },
+        "recent_commits": [
+          {
+            "sha": "e13159e",
+            "message": "Revamped README to introduce \"API Design Documentation Hub,\" highlighting featur",
+            "author": "adrian",
+            "date": "2025-10-07",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/e13159e7ca18e52589cc5a3097494d9c5b9cfff2"
+          },
+          {
+            "sha": "d1470d8",
+            "message": "Added pagination to all list endpoints, enhanced authentication specs, standardi",
+            "author": "adrian",
+            "date": "2025-09-03",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/d1470d8cd230b67272bd4c3bb6fefe7199dc88ce"
+          },
+          {
+            "sha": "4326f77",
+            "message": "Improved mobile responsiveness and added mobile menu functionality to index.html",
+            "author": "adrian",
+            "date": "2025-08-31",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/4326f7764e5c4041b4890e3896374aeebd8dd2fe"
+          },
+          {
+            "sha": "c98e67e",
+            "message": "added tool to stats the md",
+            "author": "adrian",
+            "date": "2025-08-31",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/c98e67eb2f0ed320cd6bb9eb10661d6363c7ee16"
+          },
+          {
+            "sha": "cd431c3",
+            "message": "Added API Sequence Builder with UI and functionality, including API explorer, se",
+            "author": "adrian",
+            "date": "2025-08-29",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/cd431c3ee5f13a7658c87974e59feca6417dc19c"
+          },
+          {
+            "sha": "b6b71e3",
+            "message": "Integrated Mermaid diagram viewer with theme toggling and zoom functionality dir",
+            "author": "adrian",
+            "date": "2025-08-28",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/b6b71e389361ee6873c20542ce85f17b14f85e17"
+          },
+          {
+            "sha": "a0afd99",
+            "message": "Updated entity relationship diagrams with Mermaid.js, added descriptive relation",
+            "author": "adrian",
+            "date": "2025-08-28",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/a0afd99adc2262fdcb014591f3e17ac084ab9123"
+          },
+          {
+            "sha": "a429449",
+            "message": "added apis",
+            "author": "adrian",
+            "date": "2025-08-27",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/a429449c01dff4688d3da9be5fe6744d03325124"
+          },
+          {
+            "sha": "8e820dc",
+            "message": "initial",
+            "author": "adrian",
+            "date": "2025-08-26",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/DLNP_API_Garden/commit/8e820dcec62db8a53d9b7a9464e123737d28b32b"
+          }
+        ],
+        "contributors_human": 1,
+        "contributors_ai": 0
+      },
+      "popularity_score": 15.9,
+      "score_breakdown": {
+        "stars": 0,
+        "forks": 0,
+        "commits": 0.9,
+        "activity": 10,
+        "contributors": 5,
+        "watchers": 0
+      },
+      "score_max": 350,
+      "project_type": "ai-assisted"
+    },
+    {
       "name": "DLNP-sample-vue-app",
       "full_name": "nstarx/DLNP-sample-vue-app",
       "url": "https://github.com/nstarx/DLNP-sample-vue-app",
@@ -12762,6 +12969,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-09-22": 9
@@ -12913,6 +13123,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-08-04": 5,
@@ -13066,6 +13279,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-06-11": 4,
@@ -13212,6 +13428,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/DLNP_Compliance/",
       "commit_stats": {
         "calendar": {
           "2025-08-27": 1,
@@ -13349,6 +13568,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-17": 1,
@@ -13490,6 +13712,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-06-06": 2,
@@ -13627,6 +13852,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-20": 3,
@@ -13764,6 +13992,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-12": 2,
@@ -13903,6 +14134,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-04-15": 1,
@@ -14052,6 +14286,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -14117,6 +14354,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-01": 6
@@ -14241,6 +14481,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-06-12": 6
@@ -14334,6 +14577,126 @@
       "project_type": "ai-assisted"
     },
     {
+      "name": "RAG_phase2",
+      "full_name": "nstarx/RAG_phase2",
+      "url": "https://github.com/nstarx/RAG_phase2",
+      "description": "This repo implements a Retrieval-Augmented Generation (RAG) assistant of DH second phase project",
+      "has_claude_folder": false,
+      "has_claude_md": false,
+      "claude_settings": null,
+      "size_bytes": 97280,
+      "size_human": "95.0 KB",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_issues": 0,
+      "commit_count": 5,
+      "branch_count": 1,
+      "contributor_count": 1,
+      "contributors": [
+        {
+          "login": "yassirbenhammou",
+          "avatar": "https://avatars.githubusercontent.com/u/92153964?v=4",
+          "contributions": 5,
+          "url": "https://github.com/yassirbenhammou"
+        }
+      ],
+      "primary_language": "Python",
+      "topics": [],
+      "created_at": "2025-10-02T12:16:53Z",
+      "first_commit_date": "2025-10-02T12:16:53Z",
+      "last_commit_date": "2025-10-07T12:54:22Z",
+      "is_fork": false,
+      "is_archived": false,
+      "default_branch": "main",
+      "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
+      "commit_stats": {
+        "calendar": {
+          "2025-10-07": 2,
+          "2025-10-02": 3
+        },
+        "human_calendar": {
+          "2025-10-07": 2,
+          "2025-10-02": 3
+        },
+        "ai_calendar": {},
+        "total_commits": 5,
+        "human_commits": 5,
+        "ai_commits": 0,
+        "ai_breakdown": {
+          "claude": 0,
+          "copilot": 0,
+          "gpt": 0,
+          "cursor": 0,
+          "generic": 0,
+          "bot": 0
+        },
+        "recent_commits": [
+          {
+            "sha": "faac82c",
+            "message": "Update requirements.txt",
+            "author": "Yassir Benhammou",
+            "date": "2025-10-07",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/RAG_phase2/commit/faac82cd479aba792e2ec5ba5926f20e3b484643"
+          },
+          {
+            "sha": "2467e64",
+            "message": "Update parsing and rag app to support new ppt docs, add autogen evaluation pipel",
+            "author": "Yassir Benhammou",
+            "date": "2025-10-07",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/RAG_phase2/commit/2467e640c5d2cbafbc9dc39b5451c8f87bc58f5b"
+          },
+          {
+            "sha": "503db33",
+            "message": "Initial commit phase2",
+            "author": "Yassir Benhammou",
+            "date": "2025-10-02",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/RAG_phase2/commit/503db3327a22d10fb8e2a27f0031d52cc898f6e1"
+          },
+          {
+            "sha": "964e77e",
+            "message": "Merge",
+            "author": "Yassir Benhammou",
+            "date": "2025-10-02",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/RAG_phase2/commit/964e77edd3699403a2a8e91fdaaba8cb173c1208"
+          },
+          {
+            "sha": "0a732d1",
+            "message": "Initial commit",
+            "author": "Yassir Benhammou",
+            "date": "2025-10-02",
+            "isAI": false,
+            "aiType": null,
+            "url": "https://github.com/nstarx/RAG_phase2/commit/0a732d1284d46c3f14dbdd56f7eaed2094900aea"
+          }
+        ],
+        "contributors_human": 2,
+        "contributors_ai": 0
+      },
+      "popularity_score": 15.5,
+      "score_breakdown": {
+        "stars": 0,
+        "forks": 0,
+        "commits": 0.5,
+        "activity": 10,
+        "contributors": 5,
+        "watchers": 0
+      },
+      "score_max": 350,
+      "project_type": "human"
+    },
+    {
       "name": "SHI_digitalhuman_RAG_Phase2",
       "full_name": "nstarx/SHI_digitalhuman_RAG_Phase2",
       "url": "https://github.com/nstarx/SHI_digitalhuman_RAG_Phase2",
@@ -14367,6 +14730,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-15": 5
@@ -14482,6 +14848,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-02-21": 1,
@@ -14599,6 +14968,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-25": 4
@@ -14705,6 +15077,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-01-31": 1,
@@ -14813,6 +15188,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-09-10": 3
@@ -14910,6 +15288,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-27": 3
@@ -15007,6 +15388,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-09": 3
@@ -15104,6 +15488,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-02-11": 3
@@ -15201,6 +15588,9 @@
       "is_archived": true,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/new_ai_platform_html/",
       "commit_stats": {
         "calendar": {
           "2025-02-10": 2
@@ -15289,6 +15679,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/kubeflow_bom/",
       "commit_stats": {
         "calendar": {
           "2025-08-11": 2
@@ -15377,6 +15770,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-24": 2
@@ -15465,6 +15861,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-05-06": 1,
@@ -15555,6 +15954,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-01-31": 2
@@ -15643,6 +16045,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-14": 1
@@ -15722,6 +16127,9 @@
       "is_archived": false,
       "default_branch": "master",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-14": 1
@@ -15801,6 +16209,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-07-10": 1
@@ -15880,6 +16291,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-06-29": 1
@@ -15959,6 +16373,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-04-24": 1
@@ -16038,6 +16455,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-04-30": 1
@@ -16117,6 +16537,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-03-26": 1
@@ -16196,6 +16619,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-02-20": 1
@@ -16281,6 +16707,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -16346,6 +16775,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -16417,6 +16849,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -16482,6 +16917,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -16553,6 +16991,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -16624,6 +17065,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -16695,6 +17139,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -16766,6 +17213,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -16837,6 +17287,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -16908,6 +17361,9 @@
       "is_archived": false,
       "default_branch": "master",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -16979,6 +17435,9 @@
       "is_archived": false,
       "default_branch": "master",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -17037,6 +17496,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {
           "2025-01-31": 2
@@ -17131,6 +17593,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -17202,6 +17667,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -17267,6 +17735,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -17332,6 +17803,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -17397,6 +17871,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -17462,6 +17939,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -17527,6 +18007,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -17592,6 +18075,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -17657,6 +18143,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -17722,6 +18211,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -17787,6 +18279,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -17852,6 +18347,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -17917,6 +18415,9 @@
       "is_archived": false,
       "default_branch": "master",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -17982,6 +18483,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18047,6 +18551,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18112,6 +18619,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18177,6 +18687,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18242,6 +18755,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": "MIT",
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18307,6 +18823,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": true,
+      "homepage": null,
+      "pages_url": "https://nstarx.github.io/spark-ui-resources/",
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18372,6 +18891,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": "Apache-2.0",
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18437,6 +18959,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18502,6 +19027,9 @@
       "is_archived": false,
       "default_branch": "Tej",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18567,6 +19095,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18632,6 +19163,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18697,6 +19231,9 @@
       "is_archived": false,
       "default_branch": "Tej",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18762,6 +19299,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18827,6 +19367,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18892,6 +19435,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -18957,6 +19503,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -19022,6 +19571,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -19087,6 +19639,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -19152,6 +19707,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -19217,6 +19775,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -19275,6 +19836,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -19333,6 +19897,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -19391,6 +19958,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -19449,6 +20019,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -19507,6 +20080,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -19565,6 +20141,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -19623,6 +20202,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -19681,6 +20263,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
@@ -19739,6 +20324,9 @@
       "is_archived": false,
       "default_branch": "main",
       "license": null,
+      "has_pages": false,
+      "homepage": null,
+      "pages_url": null,
       "commit_stats": {
         "calendar": {},
         "human_calendar": {},
